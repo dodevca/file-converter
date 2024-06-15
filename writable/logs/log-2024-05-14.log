@@ -1,0 +1,218 @@
+CRITICAL - 2024-05-14 01:34:21 --> Too few arguments to function App\Models\ConvertModel::__construct(), 0 passed in /www/wwwroot/convy.dodevca.com/app/Controllers/Home.php on line 9 and exactly 1 expected
+in APPPATH/Models/ConvertModel.php on line 11.
+ 1 APPPATH/Controllers/Home.php(9): App\Models\ConvertModel->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-14 01:35:33 --> Too few arguments to function App\Models\ConvertModel::__construct(), 0 passed in /www/wwwroot/convy.dodevca.com/app/Controllers/Home.php on line 9 and exactly 1 expected
+in APPPATH/Models/ConvertModel.php on line 11.
+ 1 APPPATH/Controllers/Home.php(9): App\Models\ConvertModel->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-14 01:35:35 --> Too few arguments to function App\Models\ConvertModel::__construct(), 0 passed in /www/wwwroot/convy.dodevca.com/app/Controllers/Home.php on line 9 and exactly 1 expected
+in APPPATH/Models/ConvertModel.php on line 11.
+ 1 APPPATH/Controllers/Home.php(9): App\Models\ConvertModel->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-14 01:35:45 --> Undefined variable: apiSecret
+in APPPATH/Models/ConvertModel.php on line 13.
+ 1 APPPATH/Models/ConvertModel.php(13): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Home.php(9): App\Models\ConvertModel->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-14 01:36:04 --> Class 'App\Models\ConvertApi' not found
+in APPPATH/Models/ConvertModel.php on line 13.
+ 1 APPPATH/Controllers/Home.php(9): App\Models\ConvertModel->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-14 01:36:23 --> Namespace declaration statement has to be the very first statement or after any declare call in the script
+in APPPATH/Models/ConvertModel.php on line 5.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-05-14 01:36:34 --> require(vendor/autoload.php): failed to open stream: No such file or directory
+in APPPATH/Models/ConvertModel.php on line 5.
+ 1 APPPATH/Models/ConvertModel.php(5): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Models/ConvertModel.php(5): require()
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(306): include_once('/www/wwwroot/convy.dodevca.com/app/Models/ConvertModel.php')
+ 4 SYSTEMPATH/Autoloader/Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 5 SYSTEMPATH/Autoloader/Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 7 APPPATH/Controllers/Home.php(9): spl_autoload_call()
+ 8 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 9 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+10 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+11 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-14 01:36:36 --> require(vendor/autoload.php): failed to open stream: No such file or directory
+in APPPATH/Models/ConvertModel.php on line 5.
+ 1 APPPATH/Models/ConvertModel.php(5): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Models/ConvertModel.php(5): require()
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(306): include_once('/www/wwwroot/convy.dodevca.com/app/Models/ConvertModel.php')
+ 4 SYSTEMPATH/Autoloader/Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 5 SYSTEMPATH/Autoloader/Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 7 APPPATH/Controllers/Home.php(9): spl_autoload_call()
+ 8 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 9 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+10 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+11 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-14 01:37:04 --> Class 'App\Models\ConvertApi' not found
+in APPPATH/Models/ConvertModel.php on line 13.
+ 1 APPPATH/Controllers/Home.php(9): App\Models\ConvertModel->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-14 01:40:24 --> Too few arguments to function App\Models\ConvertModel::list(), 0 passed in /www/wwwroot/convy.dodevca.com/app/Controllers/Home.php on line 20 and exactly 1 expected
+in APPPATH/Models/ConvertModel.php on line 17.
+ 1 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 2 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-14 01:40:38 --> file_get_contents(https://v2.convertapi.com/info): failed to open stream: HTTP request failed! HTTP/1.1 426 Upgrade Required
+
+in APPPATH/Models/ConvertModel.php on line 19.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Models/ConvertModel.php(19): file_get_contents()
+ 3 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 4 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 5 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-14 01:48:12 --> App\Controllers\Home::index(): Return value must be of type string, CodeIgniter\HTTP\Response returned
+in APPPATH/Controllers/Home.php on line 34.
+ 1 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 2 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-14 01:54:17 --> Attempt to read property "name" on array
+in APPPATH/Models/ConvertModel.php on line 35.
+ 1 APPPATH/Models/ConvertModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-14 01:55:15 --> Undefined array key "name"
+in APPPATH/Models/ConvertModel.php on line 35.
+ 1 APPPATH/Models/ConvertModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-14 01:55:17 --> Undefined array key "name"
+in APPPATH/Models/ConvertModel.php on line 35.
+ 1 APPPATH/Models/ConvertModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-14 01:55:40 --> Attempt to read property "Name" on array
+in APPPATH/Models/ConvertModel.php on line 35.
+ 1 APPPATH/Models/ConvertModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-14 01:55:50 --> Undefined array key 0
+in APPPATH/Models/ConvertModel.php on line 35.
+ 1 APPPATH/Models/ConvertModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-14 01:55:52 --> Undefined array key 0
+in APPPATH/Models/ConvertModel.php on line 35.
+ 1 APPPATH/Models/ConvertModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-14 01:55:59 --> Undefined array key 1
+in APPPATH/Models/ConvertModel.php on line 35.
+ 1 APPPATH/Models/ConvertModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-14 01:58:08 --> Undefined variable $res
+in APPPATH/Models/ConvertModel.php on line 41.
+ 1 APPPATH/Models/ConvertModel.php(41): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-14 01:58:18 --> App\Models\ConvertModel::list(): Return value must be of type array, stdClass returned
+in APPPATH/Models/ConvertModel.php on line 41.
+ 1 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 2 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-14 01:59:02 --> App\Models\ConvertModel::list(): Return value must be of type array, stdClass returned
+in APPPATH/Models/ConvertModel.php on line 41.
+ 1 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 2 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-14 01:59:04 --> App\Models\ConvertModel::list(): Return value must be of type array, stdClass returned
+in APPPATH/Models/ConvertModel.php on line 41.
+ 1 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 2 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-14 01:59:14 --> App\Models\ConvertModel::list(): Return value must be of type ?array, stdClass returned
+in APPPATH/Models/ConvertModel.php on line 41.
+ 1 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 2 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-14 02:07:11 --> Cannot use object of type stdClass as array
+in APPPATH/Models/ConvertModel.php on line 35.
+ 1 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 2 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-14 02:09:17 --> Undefined property: stdClass::$name
+in APPPATH/Models/ConvertModel.php on line 35.
+ 1 APPPATH/Models/ConvertModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-14 02:12:41 --> array_values() expects exactly 1 argument, 2 given
+in APPPATH/Models/ConvertModel.php on line 41.
+ 1 APPPATH/Models/ConvertModel.php(41): array_values()
+ 2 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-14 02:14:38 --> Only variables should be passed by reference
+in APPPATH/Models/ConvertModel.php on line 41.
+ 1 APPPATH/Models/ConvertModel.php(41): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

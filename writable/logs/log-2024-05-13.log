@@ -1,0 +1,93 @@
+CRITICAL - 2024-05-13 12:16:09 --> Constant expression contains invalid operations
+in APPPATH/Controllers/Home.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-05-13 12:16:18 --> Constant expression contains invalid operations
+in APPPATH/Controllers/Home.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-05-13 12:21:36 --> Attempt to modify property 'content' of non-object
+in APPPATH/Controllers/Home.php on line 28.
+ 1 APPPATH/Controllers/Home.php(28): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 3 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-13 12:21:51 --> Attempt to modify property 'content' of non-object
+in APPPATH/Controllers/Home.php on line 28.
+ 1 APPPATH/Controllers/Home.php(28): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 3 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-13 12:22:03 --> Attempt to modify property 'content' of non-object
+in APPPATH/Controllers/Home.php on line 28.
+ 1 APPPATH/Controllers/Home.php(28): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 3 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-13 12:22:04 --> Attempt to modify property 'content' of non-object
+in APPPATH/Controllers/Home.php on line 28.
+ 1 APPPATH/Controllers/Home.php(28): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 3 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-13 12:22:28 --> Attempt to modify property 'content' of non-object
+in APPPATH/Controllers/Home.php on line 28.
+ 1 APPPATH/Controllers/Home.php(28): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 3 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-13 12:22:48 --> Attempt to modify property 'contents' of non-object
+in APPPATH/Controllers/Home.php on line 28.
+ 1 APPPATH/Controllers/Home.php(28): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 3 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-13 12:22:50 --> Attempt to modify property 'contents' of non-object
+in APPPATH/Controllers/Home.php on line 28.
+ 1 APPPATH/Controllers/Home.php(28): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 3 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-13 12:23:23 --> Attempt to modify property 'contents' of non-object
+in APPPATH/Controllers/Home.php on line 26.
+ 1 APPPATH/Controllers/Home.php(26): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 3 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-13 12:43:57 --> Undefined variable: meta
+in APPPATH/Views/layouts/app.php on line 7.
+ 1 APPPATH/Views/layouts/app.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/www/wwwroot/convy.dodevca.com/app/Views/layouts/app.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/View/View.php(242): CodeIgniter\View\View->render()
+ 5 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/Home.php(51): view()
+ 7 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->login()
+ 8 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-13 12:45:11 --> Undefined variable: meta
+in APPPATH/Views/layouts/app.php on line 7.
+ 1 APPPATH/Views/layouts/app.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/www/wwwroot/convy.dodevca.com/app/Views/layouts/app.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/View/View.php(242): CodeIgniter\View\View->render()
+ 5 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 6 APPPATH/Controllers/Home.php(51): view()
+ 7 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->login()
+ 8 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-13 13:27:06 --> Creating default object from empty value
+in APPPATH/Controllers/Home.php on line 58.
+ 1 APPPATH/Controllers/Home.php(58): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->signup()
+ 3 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()

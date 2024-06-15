@@ -1,0 +1,429 @@
+CRITICAL - 2024-05-15 12:55:52 --> Undefined property: stdClass::$
+in APPPATH/Models/ConvertModel.php on line 100.
+ 1 APPPATH/Models/ConvertModel.php(100): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Home.php(34): App\Models\ConvertModel->accept()
+ 3 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 12:57:36 --> array_merge() does not accept unknown named parameters
+in APPPATH/Models/ConvertModel.php on line 98.
+ 1 [internal function]: array_merge()
+ 2 APPPATH/Models/ConvertModel.php(98): call_user_func_array()
+ 3 APPPATH/Controllers/Home.php(34): App\Models\ConvertModel->accept()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 14:02:39 --> array_merge() does not accept unknown named parameters
+in APPPATH/Models/ConvertModel.php on line 98.
+ 1 [internal function]: array_merge()
+ 2 APPPATH/Models/ConvertModel.php(98): call_user_func_array()
+ 3 APPPATH/Controllers/Home.php(34): App\Models\ConvertModel->accept()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 15:33:59 --> array_merge() does not accept unknown named parameters
+in APPPATH/Models/ConvertModel.php on line 98.
+ 1 [internal function]: array_merge()
+ 2 APPPATH/Models/ConvertModel.php(98): call_user_func_array()
+ 3 APPPATH/Controllers/Home.php(34): App\Models\ConvertModel->accept()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 16:54:42 --> array_merge() does not accept unknown named parameters
+in APPPATH/Models/ConvertModel.php on line 98.
+ 1 [internal function]: array_merge()
+ 2 APPPATH/Models/ConvertModel.php(98): call_user_func_array()
+ 3 APPPATH/Controllers/Home.php(34): App\Models\ConvertModel->accept()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 17:03:54 --> array_merge() does not accept unknown named parameters
+in APPPATH/Models/ConvertModel.php on line 98.
+ 1 [internal function]: array_merge()
+ 2 APPPATH/Models/ConvertModel.php(98): call_user_func_array()
+ 3 APPPATH/Controllers/Home.php(34): App\Models\ConvertModel->accept()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 17:34:27 --> array_merge() does not accept unknown named parameters
+in APPPATH/Models/ConvertModel.php on line 98.
+ 1 [internal function]: array_merge()
+ 2 APPPATH/Models/ConvertModel.php(98): call_user_func_array()
+ 3 APPPATH/Controllers/Home.php(34): App\Models\ConvertModel->accept()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 17:34:27 --> array_merge() does not accept unknown named parameters
+in APPPATH/Models/ConvertModel.php on line 98.
+ 1 [internal function]: array_merge()
+ 2 APPPATH/Models/ConvertModel.php(98): call_user_func_array()
+ 3 APPPATH/Controllers/Home.php(34): App\Models\ConvertModel->accept()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 17:34:27 --> array_merge() does not accept unknown named parameters
+in APPPATH/Models/ConvertModel.php on line 98.
+ 1 [internal function]: array_merge()
+ 2 APPPATH/Models/ConvertModel.php(98): call_user_func_array()
+ 3 APPPATH/Controllers/Home.php(34): App\Models\ConvertModel->accept()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 17:34:27 --> array_merge() does not accept unknown named parameters
+in APPPATH/Models/ConvertModel.php on line 98.
+ 1 [internal function]: array_merge()
+ 2 APPPATH/Models/ConvertModel.php(98): call_user_func_array()
+ 3 APPPATH/Controllers/Home.php(34): App\Models\ConvertModel->accept()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 17:34:27 --> array_merge() does not accept unknown named parameters
+in APPPATH/Models/ConvertModel.php on line 98.
+ 1 [internal function]: array_merge()
+ 2 APPPATH/Models/ConvertModel.php(98): call_user_func_array()
+ 3 APPPATH/Controllers/Home.php(34): App\Models\ConvertModel->accept()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 17:34:27 --> array_merge() does not accept unknown named parameters
+in APPPATH/Models/ConvertModel.php on line 98.
+ 1 [internal function]: array_merge()
+ 2 APPPATH/Models/ConvertModel.php(98): call_user_func_array()
+ 3 APPPATH/Controllers/Home.php(34): App\Models\ConvertModel->accept()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 17:34:28 --> array_merge() does not accept unknown named parameters
+in APPPATH/Models/ConvertModel.php on line 98.
+ 1 [internal function]: array_merge()
+ 2 APPPATH/Models/ConvertModel.php(98): call_user_func_array()
+ 3 APPPATH/Controllers/Home.php(34): App\Models\ConvertModel->accept()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 17:34:28 --> array_merge() does not accept unknown named parameters
+in APPPATH/Models/ConvertModel.php on line 98.
+ 1 [internal function]: array_merge()
+ 2 APPPATH/Models/ConvertModel.php(98): call_user_func_array()
+ 3 APPPATH/Controllers/Home.php(34): App\Models\ConvertModel->accept()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 17:34:47 --> array_merge() does not accept unknown named parameters
+in APPPATH/Models/ConvertModel.php on line 98.
+ 1 [internal function]: array_merge()
+ 2 APPPATH/Models/ConvertModel.php(98): call_user_func_array()
+ 3 APPPATH/Controllers/Home.php(34): App\Models\ConvertModel->accept()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 17:34:47 --> array_merge() does not accept unknown named parameters
+in APPPATH/Models/ConvertModel.php on line 98.
+ 1 [internal function]: array_merge()
+ 2 APPPATH/Models/ConvertModel.php(98): call_user_func_array()
+ 3 APPPATH/Controllers/Home.php(34): App\Models\ConvertModel->accept()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 18:27:55 --> array_merge() does not accept unknown named parameters
+in APPPATH/Models/ConvertModel.php on line 98.
+ 1 [internal function]: array_merge()
+ 2 APPPATH/Models/ConvertModel.php(98): call_user_func_array()
+ 3 APPPATH/Controllers/Home.php(34): App\Models\ConvertModel->accept()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 19:39:43 --> array_merge() does not accept unknown named parameters
+in APPPATH/Models/ConvertModel.php on line 98.
+ 1 [internal function]: array_merge()
+ 2 APPPATH/Models/ConvertModel.php(98): call_user_func_array()
+ 3 APPPATH/Controllers/Home.php(34): App\Models\ConvertModel->accept()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 19:42:44 --> array_values(): Argument #1 ($array) must be of type array, stdClass given
+in APPPATH/Models/ConvertModel.php on line 98.
+ 1 APPPATH/Models/ConvertModel.php(98): array_values()
+ 2 APPPATH/Controllers/Home.php(34): App\Models\ConvertModel->accept()
+ 3 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 19:43:46 --> array_values(): Argument #1 ($array) must be of type array, stdClass given
+in APPPATH/Models/ConvertModel.php on line 98.
+ 1 APPPATH/Models/ConvertModel.php(98): array_values()
+ 2 APPPATH/Controllers/Home.php(34): App\Models\ConvertModel->accept()
+ 3 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 19:43:47 --> array_values(): Argument #1 ($array) must be of type array, stdClass given
+in APPPATH/Models/ConvertModel.php on line 98.
+ 1 APPPATH/Models/ConvertModel.php(98): array_values()
+ 2 APPPATH/Controllers/Home.php(34): App\Models\ConvertModel->accept()
+ 3 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 19:43:59 --> array_merge(): Argument #1 must be of type array, stdClass given
+in APPPATH/Models/ConvertModel.php on line 98.
+ 1 APPPATH/Models/ConvertModel.php(98): array_merge()
+ 2 APPPATH/Controllers/Home.php(34): App\Models\ConvertModel->accept()
+ 3 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 19:44:00 --> array_merge(): Argument #1 must be of type array, stdClass given
+in APPPATH/Models/ConvertModel.php on line 98.
+ 1 APPPATH/Models/ConvertModel.php(98): array_merge()
+ 2 APPPATH/Controllers/Home.php(34): App\Models\ConvertModel->accept()
+ 3 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 19:48:34 --> Only arrays and Traversables can be unpacked
+in APPPATH/Models/ConvertModel.php on line 104.
+ 1 APPPATH/Controllers/Home.php(34): App\Models\ConvertModel->accept()
+ 2 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 3 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 19:53:48 --> App\Models\ConvertModel::accept(): Return value must be of type ?string, array returned
+in APPPATH/Models/ConvertModel.php on line 113.
+ 1 APPPATH/Controllers/Home.php(34): App\Models\ConvertModel->accept()
+ 2 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 3 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 19:55:23 --> Array to string conversion
+in APPPATH/Models/ConvertModel.php on line 104.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Models/ConvertModel.php(104): join()
+ 3 APPPATH/Controllers/Home.php(34): App\Models\ConvertModel->accept()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 19:55:24 --> Array to string conversion
+in APPPATH/Models/ConvertModel.php on line 104.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Models/ConvertModel.php(104): join()
+ 3 APPPATH/Controllers/Home.php(34): App\Models\ConvertModel->accept()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->index()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 20:02:28 --> Undefined property: stdClass::$accept
+in APPPATH/Views/home.php on line 11.
+ 1 APPPATH/Views/home.php(11): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/www/wwwroot/convy.dodevca.com/app/Views/home.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(49): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->category()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 20:10:27 --> Undefined property: stdClass::$accept
+in APPPATH/Views/home.php on line 11.
+ 1 APPPATH/Views/home.php(11): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/www/wwwroot/convy.dodevca.com/app/Views/home.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(51): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->category()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 21:20:16 --> Object of class stdClass could not be converted to string
+in APPPATH/Models/ConvertModel.php on line 42.
+ 1 APPPATH/Models/ConvertModel.php(42): array_unique()
+ 2 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 21:21:18 --> Undefined property: stdClass::$name
+in APPPATH/Models/ConvertModel.php on line 39.
+ 1 APPPATH/Models/ConvertModel.php(39): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 21:22:15 --> Undefined variable $res
+in APPPATH/Models/ConvertModel.php on line 39.
+ 1 APPPATH/Models/ConvertModel.php(39): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 21:22:33 --> Object of class stdClass could not be converted to string
+in APPPATH/Models/ConvertModel.php on line 43.
+ 1 APPPATH/Models/ConvertModel.php(43): array_unique()
+ 2 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 22:13:46 --> App\Models\ConvertModel::list(): Return value must be of type ?array, bool returned
+in APPPATH/Models/ConvertModel.php on line 43.
+ 1 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 2 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 22:41:24 --> Undefined variable $baseUrl
+in APPPATH/Models/ConvertModel.php on line 16.
+ 1 APPPATH/Models/ConvertModel.php(16): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 22:41:45 --> 22 : The requested URL returned error: 404 Not Found
+in SYSTEMPATH/HTTP/CURLRequest.php on line 691.
+ 1 SYSTEMPATH/HTTP/CURLRequest.php(691): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError()
+ 2 SYSTEMPATH/HTTP/CURLRequest.php(385): CodeIgniter\HTTP\CURLRequest->sendRequest()
+ 3 SYSTEMPATH/HTTP/CURLRequest.php(143): CodeIgniter\HTTP\CURLRequest->send()
+ 4 APPPATH/Models/ConvertModel.php(18): CodeIgniter\HTTP\CURLRequest->request()
+ 5 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 6 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 7 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 22:49:35 --> 22 : The requested URL returned error: 404 Not Found
+in SYSTEMPATH/HTTP/CURLRequest.php on line 691.
+ 1 SYSTEMPATH/HTTP/CURLRequest.php(691): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError()
+ 2 SYSTEMPATH/HTTP/CURLRequest.php(385): CodeIgniter\HTTP\CURLRequest->sendRequest()
+ 3 SYSTEMPATH/HTTP/CURLRequest.php(143): CodeIgniter\HTTP\CURLRequest->send()
+ 4 APPPATH/Models/ConvertModel.php(18): CodeIgniter\HTTP\CURLRequest->request()
+ 5 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 6 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 7 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 23:09:30 --> 22 : The requested URL returned error: 404 Not Found
+in SYSTEMPATH/HTTP/CURLRequest.php on line 691.
+ 1 SYSTEMPATH/HTTP/CURLRequest.php(691): CodeIgniter\HTTP\Exceptions\HTTPException::forCurlError()
+ 2 SYSTEMPATH/HTTP/CURLRequest.php(385): CodeIgniter\HTTP\CURLRequest->sendRequest()
+ 3 SYSTEMPATH/HTTP/CURLRequest.php(143): CodeIgniter\HTTP\CURLRequest->send()
+ 4 APPPATH/Models/ConvertModel.php(18): CodeIgniter\HTTP\CURLRequest->request()
+ 5 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 6 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 7 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 23:17:57 --> Undefined array key "ext"
+in APPPATH/Models/ConvertModel.php on line 25.
+ 1 APPPATH/Models/ConvertModel.php(25): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 23:18:10 --> Attempt to read property "ext" on array
+in APPPATH/Models/ConvertModel.php on line 25.
+ 1 APPPATH/Models/ConvertModel.php(25): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 23:18:33 --> Undefined array key "ext"
+in APPPATH/Models/ConvertModel.php on line 25.
+ 1 APPPATH/Models/ConvertModel.php(25): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 23:21:25 --> Attempt to read property "formats" on array
+in APPPATH/Models/ConvertModel.php on line 24.
+ 1 APPPATH/Models/ConvertModel.php(24): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 23:28:32 --> array_keys(): Argument #1 ($array) must be of type array, stdClass given
+in APPPATH/Models/ConvertModel.php on line 43.
+ 1 APPPATH/Models/ConvertModel.php(43): array_keys()
+ 2 APPPATH/Controllers/Home.php(20): App\Models\ConvertModel->list()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Home->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 23:29:38 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 883.
+ 1 SYSTEMPATH/Model.php(635): CodeIgniter\Database\BaseConnection->table()
+ 2 SYSTEMPATH/Model.php(863): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/Home.php(49): CodeIgniter\Model->__call()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->category()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 23:32:17 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 883.
+ 1 SYSTEMPATH/Model.php(635): CodeIgniter\Database\BaseConnection->table()
+ 2 SYSTEMPATH/Model.php(863): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/Home.php(49): CodeIgniter\Model->__call()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->category()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 23:32:20 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 883.
+ 1 SYSTEMPATH/Model.php(635): CodeIgniter\Database\BaseConnection->table()
+ 2 SYSTEMPATH/Model.php(863): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/Home.php(49): CodeIgniter\Model->__call()
+ 4 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->category()
+ 5 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 23:33:19 --> Undefined array key "$category"
+in APPPATH/Models/ConvertModel.php on line 46.
+ 1 APPPATH/Models/ConvertModel.php(46): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Home.php(49): App\Models\ConvertModel->list()
+ 3 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->category()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 23:33:20 --> Undefined array key "$category"
+in APPPATH/Models/ConvertModel.php on line 46.
+ 1 APPPATH/Models/ConvertModel.php(46): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Home.php(49): App\Models\ConvertModel->list()
+ 3 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->category()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-15 23:33:36 --> Array to string conversion
+in APPPATH/Views/home.php on line 11.
+ 1 APPPATH/Views/home.php(11): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(226): include('/www/wwwroot/convy.dodevca.com/app/Views/home.php')
+ 3 SYSTEMPATH/View/View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1188): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/Home.php(51): view()
+ 6 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Home->category()
+ 7 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
