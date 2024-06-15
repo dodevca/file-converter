@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CodeIgniter 4 Framework
 
 ## What is CodeIgniter?
@@ -52,3 +53,7 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 - json (enabled by default - don't turn it off)
 - [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
 - [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+=======
+# rtc-file-transfer
+Real time file transfer with RTC WebSocket using NodeJS
+>>>>>>> a4a31fe41865aa9075aa12f3c2ad9c5bfad31ae4
