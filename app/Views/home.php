@@ -155,6 +155,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		handleFiles(e.target.files);
 	});
 
+	convertBtn.addEventListener('click', function(e) {
+		console.log("convert")
+	})
+
 	function preventDefaults(e) {
 		e.preventDefault();
 		e.stopPropagation();
