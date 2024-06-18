@@ -11,6 +11,6 @@ $routes->get('/option', 'Home::option');
 $routes->get('/pricing', 'Home::pricing');
 $routes->get('/logout', 'Home::logout');
 
-$routes->post('/convert', 'Home::download');
+$routes->post('/convert', 'Home::convert');
 $routes->post('/login', 'Home::login');
 $routes->post('/signup', 'Home::signup');

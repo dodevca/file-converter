@@ -7,8 +7,10 @@ use \ConvertApi\ConvertApi;
 
 class ConvertModel extends Model
 {
-    private $apiKey     = 'api_production_44978a7b40a64b6caff95a7617a9a73b7ec029f38f0c86e6a0d5dbc53fa5c008.66453c39fd110c63bdd75a8f.66453c64fd110c63bdd75ae2';
+    private $apiKey     = 'api_production_3194212f7967fb10f9992a4c68ca5d81ce4e00d79558aa5e1cbd8a7b68461a87.66453c39fd110c63bdd75a8f.66714753ec714decadba825f';
     private $baseUrl    = 'https://api.freeconvert.com/v1/';
+
+
 
     public function list($category = null): ?array
     {
@@ -48,7 +50,7 @@ class ConvertModel extends Model
         return $data;
     }
 
-    public function option($input)
+    public function option($input): ?array
     {
         $curl       = \Config\Services::curlrequest();
         $response   = $curl->request('GET', "{$this->baseUrl}query/formats/convert?apikey={$this->apiKey}&output_format={$input}");
@@ -68,5 +70,83 @@ class ConvertModel extends Model
         }
 
         return $data;
+    }
+
+    public function info($taskId): ?array
+    {
+        $options = [
+            'http' => [
+                'header' => "Content-Type: application/json\r\n" .
+                            "Accept: application/json\r\n" .
+                            "Authorization: Bearer $this->apiKey\r\n",
+            ],
+        ];
+        $context    = stream_context_create($options);
+        $result     = file_get_contents($this->baseUrl . 'process/tasks/' . $taskId , false, $context);
+
+        if($result === FALSE)
+            return ['status' => '400', 'message' => 'Export failed'];
+
+        return json_decode($result, true);
+    }
+
+    public function process($url, $name, $input, $output): ?array
+    {
+        $data = [
+            'tag'   => "conversion",
+            'tasks' => [
+                'import'    => [
+                    'operation' => "import/url",
+                    'url'       => $url,
+                    'filename'  => $name,
+                ],
+                'convert'   => [
+                    'operation'     => "convert",
+                    'input'         => "import",
+                    'output_format' =>  $output
+                ]
+            ]
+        ];
+        $options    = [
+            'http' => [
+                'header'    => "Content-Type: application/json\r\n" .
+                                "Accept: application/json\r\n" .
+                                "Authorization: Bearer $this->apiKey\r\n",
+                'method'    => 'POST',
+                'content'   => json_encode($data),
+            ],
+        ];
+        $context    = stream_context_create($options);
+        $result     = file_get_contents($this->baseUrl . 'process/jobs' , false, $context);
+
+        if($result === FALSE)
+            return ['status' => '400', 'message' => 'Conversion failed'];
+
+        return json_decode($result, true);
+    }
+
+    public function download($tasks, $name = "Convy"): ?array
+    {
+        $data = [
+            'input'                     => $tasks,
+            'filename'                  => $name,
+            'archive_multiple_files'    => true
+        ];
+        $options    = [
+            'http' => [
+                'header'    => "Content-Type: application/json\r\n" .
+                                "Accept: application/json\r\n" .
+                                "Authorization: Bearer $this->apiKey\r\n",
+                'method'    => 'POST',
+                'content'   => json_encode($data),
+            ],
+        ];
+        $context    = stream_context_create($options);
+        $result     = file_get_contents($this->baseUrl . 'process/export/url' , false, $context);
+
+        if($result === FALSE)
+            return ['status' => '400', 'message' => 'Export failed'];
+
+        return json_decode($result, true);
     }
 }

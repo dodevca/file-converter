@@ -7,7 +7,7 @@ class Home extends BaseController
     function __construct()
     {
         $this->session  = session();
-        $this->conv     = new \App\Models\ConvertModel();
+        $this->convert  = new \App\Models\ConvertModel();
         $this->data     = [
             'meta'      => (object) [
                 'title' => 'Convy - File Converter',
@@ -17,7 +17,7 @@ class Home extends BaseController
                 'id'    => $this->isLoggedIn(),
             ],
             'contents'  => (object) [
-                'categories'    => $this->conv->list(),
+                'categories'    => $this->convert->list(),
                 'file'          => (object) [
                     'accept'    => [],
                     'source'    => null,
@@ -53,7 +53,7 @@ class Home extends BaseController
 
         $this->data['meta']->title              = ucwords($category) . ' Converter by Convy';
         $this->data['meta']->name               = $category;
-        $this->data['contents']->file->accept   = $this->conv->list($category);
+        $this->data['contents']->file->accept   = $this->convert->list($category);
 
         return view('home', $this->data);
         // return $this->response->setJSON($this->data);
@@ -64,15 +64,60 @@ class Home extends BaseController
         $input  = $this->request->getGet('i');
         $data   = null;
 
-        if(!empty($input))
-            $data = $this->conv->option($input);
+        if($input)
+            $data = $this->convert->option($input);
 
         return $this->response->setJSON($data);
     }
 
     public function convert()
     {
-        return $this->response->setJSON($this->response->getPost());
+        $files      = $this->request->getFiles();
+        $formats    = $this->request->getPost('formats');
+        $exportName = "Convy";
+        $data       = [];
+
+        if($files) {
+            $tasks = [];
+
+            foreach($files['files'] as $key => $file) {
+                if($file->isValid() && !$file->hasMoved()) {
+                    $format     = $formats[$key];
+                    $name       = $file->getClientName();
+                    $ext        = $file->getClientExtension();
+                    $newName    = $file->getRandomName();
+
+                    if($key == 0)
+                        $exportName = $name;
+
+                    if($file->move(ROOTPATH . 'public/uploads/', $newName))
+                        $url = 'https://convy.dodevca.com/uploads/' . $newName;
+                    else 
+                        $url = null;
+
+                    $convert = $this->convert->process($url, $name, $ext, $format);
+
+                    if($convert['status'] == '400')
+                        return $this->response->setJSON($convert);
+
+                    $tasks[] = $convert['tasks'][0]['id'];
+                }
+            }
+
+            $download = $this->convert->download($tasks, $exportName);
+            
+            if($download['status'] == '400')
+                return $this->response->setJSON($download);
+
+            do {
+                $data       = $this->convert->info($download['id']);
+                $completed  = $data['status'] == 'completed' ?? false;
+            } while(!$completed);
+
+            return $this->response->setJSON(['status' => 200, 'responses' => $data['result']['url']]);
+        } else {
+            return $this->response->setJSON(['status' => 400, 'message' => 'File undefined']);
+        }
     }
 
     public function login()
