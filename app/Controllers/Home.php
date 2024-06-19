@@ -98,7 +98,11 @@ class Home extends BaseController
                     if($convert['status'] == '400')
                         return $this->response->setJSON($convert);
 
-                    $tasks[] = $convert['tasks'][0]['id'];
+                    do {
+                        $converted = $this->convert->info($convert['tasks'][1]['id'])['status'] == 'completed' ?? false;
+                    } while(!$converted);
+
+                    $tasks[] = $convert['tasks'][1]['id'];
                 }
             }
 
