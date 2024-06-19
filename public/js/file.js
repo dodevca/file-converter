@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', (event) => {
 	// initial elements
     const dropArea		= document.getElementById('drop-area')
+	const fileArea 	    = document.getElementById('file-area')
+	const downloadArea	= document.getElementById('download-area')
+	const loading		= document.getElementById('loading')
 	const fileInput		= document.getElementById('file-input')
 	const fileList		= document.getElementById('file-list')
-	const fileArea 	    = document.getElementById('file-area')
 	const fileCounter	= document.querySelector('.text-muted span')
     const addBtn        = document.getElementById('add-button')
     const browseBtn     = document.getElementById('browse-button')
@@ -29,10 +31,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		const selects   = document.querySelectorAll('.file-output select')
 		const isSelect  = Array.from(selects).every(select => select.value !== '...')
 
-		if(isSelect)
-			convertBtn.removeAttribute('disabled')
-		else
-			convertBtn.setAttribute('disabled', 'disabled')
+		convertBtn.disabled = !isSelect
 	}
 
     const getFormat = (filename) => {
@@ -183,6 +182,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const handleSubmit = () => {
         const form = new FormData()
 
+		convertBtn.disabled = true
+		fileArea.style.display = 'none'
+		loading.style.display = 'block'
         document.querySelectorAll('.file-wrapper').forEach((e, i) => {
 			const fileOutput = e.querySelector('.file-output select').value
 
@@ -196,10 +198,34 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		})
 		.then(response => response.json())
 		.then(data => {
-			console.log('Success:', data)
+			if(data.status == 200 || data.status == '200') {
+				downloadArea.innerHTML = `
+					<h3 class="h5 text-center mb-4">File anda telah selesai dikonversi</h3>
+					<div class="d-flex align-items-center justify-content-center gap-3">
+						<button type="button" class="btn btn-outline-secondary rounded-circle px-2 py-1" onclick="location.reload();">
+							<i class="bi bi-chevron-compact-left"></i>
+						</button>
+						<a href="${data.responses}" class="btn btn-secondary px-4 py-3" id="download-button">
+							Download file
+						</a>
+					</div>
+				`;
+			} else {
+				downloadArea.innerHTML = `
+					<div class="alert alert-danger text-start alert-dismissible fade show" role="alert">
+						<strong>Error: </strong> ${data.responses}
+						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+					</div>
+				`;
+			}
+
+			console.log(data)
+
+			loading.style.display = 'none'
+			downloadArea.style.display = 'block';
 		})
 		.catch(error => {
-			console.error('Error:', error)
+			console.log(error)
 		})
     }
 
@@ -220,11 +246,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		fileInput.click()
 	})
 
-	fileInput.addEventListener('change', function(e) {
+	fileInput.addEventListener('change', (e) => {
 		handleFiles(e.target.files)
 	})
 
-	convertBtn.addEventListener('click', function(e) {
+	convertBtn.addEventListener('click', (e) => {
 		e.preventDefault()
 
         handleSubmit()

@@ -30,6 +30,14 @@
 						</button>
 					</div>
 				</div>
+				<div id="loading" style="display: none;">
+					<div class="d-flex justify-content-center">
+						<div class="spinner-border text-primary" role="status">
+							<span class="visually-hidden">Loading...</span>
+						</div>
+					</div>
+				</div>
+				<div id="download-area" style="display: none;"></div>
 			</div>
 		</div>
 	</div>

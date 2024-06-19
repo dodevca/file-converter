@@ -74,7 +74,7 @@ class Home extends BaseController
     {
         $files      = $this->request->getFiles();
         $formats    = $this->request->getPost('formats');
-        $exportName = "Convy";
+        $exportName = "Convy.zip";
         $data       = [];
 
         if($files) {
@@ -86,9 +86,7 @@ class Home extends BaseController
                     $name       = $file->getClientName();
                     $ext        = $file->getClientExtension();
                     $newName    = $file->getRandomName();
-
-                    if($key == 0)
-                        $exportName = $name;
+                    $exportName = preg_replace('/\.\w+$/', '', $name) . '.' . $format;
 
                     if($file->move(ROOTPATH . 'public/uploads/', $newName))
                         $url = 'https://convy.dodevca.com/uploads/' . $newName;
@@ -116,7 +114,7 @@ class Home extends BaseController
 
             return $this->response->setJSON(['status' => 200, 'responses' => $data['result']['url']]);
         } else {
-            return $this->response->setJSON(['status' => 400, 'message' => 'File undefined']);
+            return $this->response->setJSON(['status' => 400, 'message' => 'Gagal melakukan konversi']);
         }
     }
 
