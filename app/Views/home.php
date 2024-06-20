@@ -16,10 +16,12 @@
 						<span class="position-relative text-muted small bg-white p-2 z-2">atau</span>
 					</div>
 					<p class="mb-4">seret dan letakkan file di sini</p>
-					<?php if(empty($user->id)): ?>
+					<?php if(empty($user->subscription)): ?>
 						<div class="alert alert-warning text-center fade show" role="alert">
 							Maksimum ukuran 100 MB. <a href="/pricing"><strong>Berlangganan</strong></a> untuk mendapatkan lebih.
 						</div>
+					<?php else: ?>
+						<p class="small text-muted mb-0">Maksimum ukuran <?= $user->package->ukuran_maks / 1000000000 ?> GB<?= $user->package->id < 4 ? '. <a href="/pricing"><strong>Upgrade</strong></a> untuk mendapatkan lebih.</p>' : '' ?>
 					<?php endif; ?>
 				</div>
 				<div id="file-area" style="display: none;">
@@ -27,12 +29,19 @@
 						<i class="bi bi-file-earmark-plus-fill me-2"></i>Tambah file
 					</button>
 					<ul id="file-list" class="list-group mt-3"></ul>
-					<div class="d-flex align-items-center justify-content-between">
-						<p class="text-muted m-0">
+					<div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+						<p class="text-muted small m-0">
 							<span>0</span> file diunggah
 						</p>
-						<button type="button" class="btn btn-secondary" id="convert-button" disabled>Konversi <i class="bi bi-arrow-repeat ms-2"></i>
-						</button>
+						<div class="d-flex align-items-center justify-content-end gap-2 ms-auto">
+							<?php if($user->subscription): ?>
+								<p class="small m-0">
+									<?= $user->subscription->menit ?> / <?= $user->package->menit_maks ?> menit
+								</p>
+							<?php endif; ?>
+							<button type="button" class="btn btn-secondary" id="convert-button" disabled>Konversi <i class="bi bi-arrow-repeat ms-2"></i>
+							</button>
+						</div>
 					</div>
 				</div>
 				<div id="loading" style="display: none;">
@@ -176,7 +185,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 				fileDetails.classList.add('file-name', 'd-flex', 'align-items-center', 'justify-content-start', 'me-auto', 'gap-2', 'order-1')
 
 				const fileSize          = document.createElement('p')
-				fileSize.textContent    = `${Math.round(file.size / 1024)} KB`
+				fileSize.textContent    = `${(file.size / 1000000).toFixed(2)} MB`
 				fileSize.classList.add('text-muted', 'small', 'text-nowrap', 'm-0', 'order-2')
 
 				const outputSelectContainer = document.createElement('div')
@@ -230,27 +239,27 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		const filesArray 		= Array.from(files)
 		const currentFileCount	= fileList.children.length
 
-		if(currentFileCount + filesArray.length > 5) {
-			let excessFiles	= (currentFileCount + filesArray.length) - 5
+		if(currentFileCount + filesArray.length > parseInt('<?= $user->subscription ? $user->package->konversi : 5 ?>')) {
+			let excessFiles	= (currentFileCount + filesArray.length) - parseInt('<?= $user->subscription ? $user->package->konversi : 5 ?>')
 			let alertHTML	= `
 				<div class="alert alert-danger text-start alert-dismissible fade show" role="alert">
-					Anda tidak dapat mengkonversi lebih dari 5 file bersamaan. <a href="/pricing"><strong>Berlangganan</strong></a> untuk mendapatkan lebih.
+					Anda tidak dapat mengkonversi lebih dari <?= $user->subscription ? $user->package->konversi : 5 ?> file bersamaan. <a href="/pricing"><strong>Berlangganan</strong></a> untuk mendapatkan lebih.
 					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 				</div>
 			`
 
 			dropArea.insertAdjacentHTML('afterbegin', alertHTML)
 			fileArea.insertAdjacentHTML('afterbegin', alertHTML)
-			filesArray.splice(5 - currentFileCount, excessFiles)
+			filesArray.splice(parseInt('<?= $user->subscription ? $user->package->konversi : 5 ?>') - currentFileCount, excessFiles)
 		}
 
 		const previewPromises = []
 
 		filesArray.forEach(f => {
-			if(f.size > 100 * 1024 * 1024) {
+			if(f.size > parseInt('<?= $user->subscription ? $user->package->ukuran_maks : 100000000 ?>')) {
 				let alertHTML = `
 					<div class="alert alert-danger text-start alert-dismissible fade show" role="alert">
-						<strong>Batas maksimum ukuran terlampaui!</strong> File ${f.name} melebihi 100 MB.
+						<strong>Batas maksimum ukuran terlampaui!</strong> File ${f.name} melebihi <?= $user->subscription ? $user->package->ukuran_maks / 1000000000 . ' GB' : 100 . ' MB' ?>.
 						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 					</div>
 				`
@@ -269,19 +278,38 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	}
 
     const handleSubmit = () => {
-        const form = new FormData()
-
+        const form 			= new FormData()
 		convertBtn.disabled = true
-		fileArea.style.display = 'none'
-		loading.style.display = 'block'
-        document.querySelectorAll('.file-wrapper').forEach((e, i) => {
+
+		<?php if(!$user->subscription): ?>
+			if(sessionStorage.convertCount > 5) {
+				let alertHTML	= `
+					<div class="alert alert-danger text-start alert-dismissible fade show" role="alert">
+						Anda melbihi batas waktu konversi. <a href="/pricing"><strong>Berlangganan</strong></a> untuk mendapatkan lebih.
+						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+					</div>
+				`
+
+				fileArea.insertAdjacentHTML('afterbegin', alertHTML)
+			}
+		<?php endif; ?>
+
+		if(sessionStorage.convertCount)
+			sessionStorage.convertCount = Number(sessionStorage.convertCount) + 1;
+		else
+			sessionStorage.convertCount = 1;
+		
+		fileArea.style.display	= 'none'
+		loading.style.display 	= 'block'
+
+		document.querySelectorAll('.file-wrapper').forEach((e, i) => {
 			const fileOutput = e.querySelector('.file-output select').value
 
 			form.append('files[]', fileInput.files[i])
 			form.append('formats[]', fileOutput)
-        })
+		})
 
-        fetch('/convert', {
+		fetch('/convert', {
 			method: 'POST',
 			body: form
 		})
@@ -341,8 +369,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 	convertBtn.addEventListener('click', (e) => {
 		e.preventDefault()
-
-        handleSubmit()
+		
+		<?php if($user->subscription): ?>
+			<?php if($user->subscription->menit > 0): ?>
+	        	handleSubmit()
+			<?php endif; ?>
+		<?php else: ?>
+	        handleSubmit()
+		<?php endif; ?>
 	})
 })
 </script>

@@ -20,27 +20,15 @@
                             <ul class="list-unstyled my-3">
                                 <li class="mb-3">
                                     <i class="bi bi-check-circle text-success me-2"></i>
-                                    <?php if($p->ukuran_maks > 0): ?>
-                                        <?= $p->ukuran_maks / 1000000000 ?> GB ukuran masksimum
-                                    <?php else: ?>
-                                        Unlimited
-                                    <?php endif; ?>
+                                    <?= $p->ukuran_maks / 1000000000 ?> GB ukuran masksimum
                                 </li>
                                 <li class="mb-3">
                                     <i class="bi bi-check-circle text-success me-2"></i>
-                                    <?php if($p->menit_maks > 0): ?>
-                                        <?= $p->menit_maks ?> menit konversi/Bulan
-                                    <?php else: ?>
-                                        Unlimited
-                                    <?php endif; ?>
+                                    <?= $p->menit_maks ?> menit konversi/Bulan
                                 </li>
                                 <li class="mb-3">
                                     <i class="bi bi-check-circle text-success me-2"></i>
-                                    <?php if($p->konversi > 0): ?>
-                                        <?= $p->konversi ?> konversi sekaligus
-                                    <?php else: ?>
-                                        Unlimited
-                                    <?php endif; ?>
+                                    <?= $p->konversi ?> konversi sekaligus
                                 </li>
                                 <?php if($p->kecepatan_tinggi): ?>
                                     <li class="mb-3">

@@ -25,4 +25,5 @@ $routes->group('convert', static function($routes) {
 
 $routes->group('payment', static function($routes) {
     $routes->post('/', 'Payment::index');
+    $routes->post('finish', 'Payment::finish');
 });

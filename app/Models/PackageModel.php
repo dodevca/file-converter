@@ -23,8 +23,11 @@ class PackageModel extends Model
         return $this->findAll();
     }
 
-    public function info($id): ?object
+    public function info($id, $column = 'all'): ?object
     {
-        return $this->find($id);
+        if($column == 'all')
+            return $this->find($id);
+        else
+            return $this->select($column)->where('id', $id)->first();
     }
 }

@@ -2,10 +2,14 @@
 
 namespace App\Controllers;
 
+use App\Models\SubscriptionModel;
+use App\Models\AuthModel;
 use App\Models\ConvertModel;
 
 class Convert extends BaseController
 {
+    protected $subs, $auth;
+
     public function __construct()
     {
         $this->convert = new ConvertModel();
@@ -45,7 +49,23 @@ class Convert extends BaseController
 
                 do {
                     $converted = $this->convert->info($convert['tasks'][1]['id'])['status'] == 'completed' ?? false;
+                    
+                    sleep(2);
                 } while(!$converted);
+
+                $this->auth = new AuthModel();
+                $this->subs = new SubscriptionModel();
+                $subscribe  = $this->subs->info($this->auth->data());
+                
+                if($subscribe) {
+                    $minutes    = (int) $subscribe->menit;
+                    $createdAt  = new \DateTime($convert['tasks'][1]['createdAt']);
+                    $expiresAt  = new \DateTime();
+                    $interval   = $createdAt->diff($expiresAt);
+                    $diff       = ceil(($interval->days * 24 * 60) + ($interval->h * 60) + $interval->i + ($interval->s / 60));
+
+                    $this->subs->used($this->auth->data(), $minutes - $diff);
+                }
 
                 $tasks[] = $convert['tasks'][1]['id'];
             }
@@ -59,6 +79,8 @@ class Convert extends BaseController
         do {
             $data       = $this->convert->info($download['id']);
             $completed  = $data['status'] == 'completed' ?? false;
+
+            sleep(2);
         } while(!$completed);
 
         return $this->response->setJSON(['status' => 200, 'responses' => $data['result']['url']]);

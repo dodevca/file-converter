@@ -10,13 +10,15 @@ use App\Models\PackageModel;
 
 class Home extends BaseController
 {
-    protected $convert, $package;
+    protected $convert;
 
     public function __construct()
     {
         $this->user     = new UserModel();
         $this->subs     = new SubscriptionModel();
+        $this->package  = new PackageModel();
         $this->auth     = new AuthModel();
+        $subscription   = $this->subs->info($this->auth->data()) ?? null;
         $this->data     = [
             'meta'      => (object) [
                 'title' => '',
@@ -24,8 +26,9 @@ class Home extends BaseController
             ],
             'user'      => (object) [
                 'id'            => $this->auth->data(),
-                'email'         => $this->user->info($this->auth->data(), 'email'),
-                'isSubscribe'   => $this->subs->for($this->auth->data(), 'status')->status ?? false
+                'email'         => $this->user->info($this->auth->data(), 'email')->email ?? null,
+                'subscription'  => $subscription,
+                'package'       => $subscription ? $this->package->info($subscription->id_paket) : null
             ]
         ];
     }

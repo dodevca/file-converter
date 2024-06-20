@@ -13,23 +13,21 @@ class SubscriptionModel extends Model
         'id_paket',
         'menit',
         'tanggal_mulai',
-        'tanggal_berakhir',
-        'status'
+        'tanggal_berakhir'
     ];
     protected $useTimestamps    = false;
     protected $returnType       = 'object';
 
-    public function for($userId, $column = 'all'): ?object
+    public function info($userId, $column = 'all'): ?object
     {
         if($column == 'all')
-            return $this->select(implode(', ', $allowedFields))->where([
-                'id_pengguna'   => $userId,
-                'status'        => 1
-            ])->orderBy('tanggal_berakhir', 'DESC')->first();
+            return $this->select(implode(', ', $this->allowedFields))->where('id_pengguna', $userId)->first();
         else
-            return $this->select($column)->where([
-                'id_pengguna'   => $userId,
-                'status'        => 1
-            ])->orderBy('tanggal_berakhir', 'DESC')->first();
+            return $this->select($column)->where('id_pengguna', $userId)->first();
+    }
+
+    public function used($userId, $minutes)
+    {
+        return $this->where('id_pengguna', $userId)->set(['menit' => $minutes])->update();
     }
 }

@@ -24,7 +24,7 @@ class Dashboard extends BaseController
             'user'      => (object) [
                 'id'            => $this->auth->data(),
                 'email'         => $this->user->info($this->auth->data(), 'email')->email ?? null,
-                'isSubscribe'   => $this->subs->for($this->auth->data(), 'status')->status ?? false
+                'subscription'  => $this->subs->info($this->auth->data()) ?? null
             ]
         ];
     }
@@ -51,10 +51,8 @@ class Dashboard extends BaseController
         if(!$id)
             return redirect()->to('pricing');
 
-        if($this->data['user']->isSubscribe) {
-            $packageActive = $this->subs->for($this->data['user']->id, 'id_paket');
-
-            if($packageActive->id_paket == $id)
+        if($this->data['user']->subscription) {
+            if($this->data['user']->subscription->id_paket == $id)
                 return redirect()->to('pricing')->with('error', 'Anda sedang menggunakan paket yang sama');
         }
 

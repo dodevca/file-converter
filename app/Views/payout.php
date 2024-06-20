@@ -147,7 +147,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			snap.pay(data.responses, {
 				onSuccess: function(result) {
-					showAlert('success', 'Pembayaran berhasil. Lihat pembayaran anda <a href="<?= base_url('dashboard/payment') ?>">di sini</a>')
+					result.user_id 		= parseInt('<?= $user->id ?>')
+					result.package_id 	= parseInt('<?= $contents->package->id ?>')
+
+					fetch('<?= base_url('payment/finish') ?>', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(result)
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if(data.status == 200 || data.status == '200')
+                            showAlert('success', 'Pembayaran berhasil. Lihat pembayaran anda <a href="<?= base_url('dashboard/payment') ?>">di sini</a>')
+                        else
+						showAlert('danger', 'Terjadi kesalahan. Pembayaran dibatalkan.')
+                    })
 				},
 				onPending: function(result) {
 					showAlert('warning', 'Pembayaran anda tertunda')
