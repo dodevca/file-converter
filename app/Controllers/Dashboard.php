@@ -4,15 +4,17 @@ namespace App\Controllers;
 
 use App\Models\AuthModel;
 use App\Models\UserModel;
+use App\Models\SubscriptionModel;
 use App\Models\PackageModel;
 
 class Dashboard extends BaseController
 {
-    protected $user, $package;
+    protected $package;
 
     public function __construct()
     {
         $this->user     = new UserModel();
+        $this->subs     = new SubscriptionModel();
         $this->auth     = new AuthModel();
         $this->data     = [
             'meta'      => (object) [
@@ -20,8 +22,9 @@ class Dashboard extends BaseController
                 'name'  => ''
             ],
             'user'      => (object) [
-                'id'    => $this->user->info($this->auth->data(), 'id'),
-                'email' => $this->user->info($this->auth->data(), 'email')
+                'id'            => $this->auth->data(),
+                'email'         => $this->user->info($this->auth->data(), 'email')->email ?? null,
+                'isSubscribe'   => $this->subs->for($this->auth->data(), 'status')->status ?? false
             ]
         ];
     }
@@ -48,6 +51,14 @@ class Dashboard extends BaseController
         if(!$id)
             return redirect()->to('pricing');
 
+        if($this->data['user']->isSubscribe) {
+            $packageActive = $this->subs->for($this->data['user']->id, 'id_paket');
+
+            if($packageActive->id_paket == $id)
+                return redirect()->to('pricing')->with('error', 'Anda sedang menggunakan paket yang sama');
+        }
+
+
         $this->package              = new PackageModel();
         $this->data['meta']->title  = 'Bayar - Convy';
         $this->data['meta']->name   = 'payout';
@@ -57,7 +68,7 @@ class Dashboard extends BaseController
             'package'   => $packageInfo,
             'tax'       => $tax,
             'total'     => $packageInfo->harga + $tax,
-            'billing'   => []
+            'billing'   => $this->user->info($this->data['user']->id)
         ];
 
         return view('payout', $this->data);

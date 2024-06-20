@@ -27,6 +27,6 @@ class UserModel extends Model
         if($column == 'all')
             return $this->find($id);
         else
-            return $this->where('id', $id)->findColumn($column);
+            return $this->select($column)->where('id', $id)->first();
     }
 }

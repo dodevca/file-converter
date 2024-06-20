@@ -28,5 +28,25 @@ class Payment extends BaseController
         } catch (\Exception $e) {
             return $this->response->setJSON(['status' => 400, 'message' => $e->getMessage()]);
         }
+
+        // return $this->response->setJSON([env('MIDTRANS_SERVER_KEY')]);
+    }
+    public function notification()
+    {
+        $notif          = new \Midtrans\Notification();
+        $transaction    = $notif->transaction_status;
+        $type           = $notif->payment_type;
+        $order_id       = $notif->order_id;
+        $fraud          = $notif->fraud_status;
+
+        if($transaction == 'capture') {
+            if($type == 'credit_card') {
+                if($fraud == 'challenge') {
+                    
+                } else {
+
+                }
+            }
+        }
     }
 }

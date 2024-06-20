@@ -30,13 +30,13 @@ class AuthModel extends Model
     public function login($email, $password): bool
     {
         $this->user = new UserModel();
-        $id         = $this->user->where([
+        $id         = $this->user->select('id')->where([
             'email'     => $email,
             'password'  => $password
-        ])->findColumn('id');
+        ])->first();
 
         if(!empty($id))
-            $this->session->set(['isLoggedIn' => $id]);
+            $this->session->set(['isLoggedIn' => $id->id]);
 
         return $this->isLoggedIn();
     }

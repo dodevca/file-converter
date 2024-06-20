@@ -38,7 +38,7 @@
 								<i class="bi bi-person-circle text-muted fs-3"></i>
 							</button>
 							<ul class="dropdown-menu border-0 shadow-lg dropdown-menu-end px-3">
-								<li><a class="dropdown-item rounded-3 bg-secondary bg-opacity-50 text-white" href="<?= base_url('pricing') ?>"><i class="bi bi<?=  $user->isSubscribe ? 'person-fill-up' : '-award-fill' ?> me-2"></i><?=  $user->isSubscribe ? 'Upgrade paket' : 'Berlanganan Sekarang' ?></a></li>
+								<li><a class="dropdown-item rounded-3 bg-secondary bg-opacity-50 text-white" href="<?= base_url('pricing') ?>"><i class="bi bi<?=  $user->isSubscribe ? '-person-fill-up' : '-award-fill' ?> me-2"></i><?=  $user->isSubscribe ? 'Upgrade paket' : 'Berlanganan Sekarang' ?></a></li>
 								<li><a class="dropdown-item" href="<?= base_url('dashboard') ?>"><i class="bi bi-grid-1x2-fill me-2"></i>Dashboard</a></li>
 								<li><hr class="dropdown-divider"></li>
 								<li><a class="dropdown-item text-danger" href="<?= base_url('logout') ?>"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
@@ -61,7 +61,7 @@
 	</header>
 	<main class="position-relative">
 		<?php if(session()->has('success') || session()->has('error')): ?>
-			<div class="position-absolute top-0 start-50 translate-middle-x container mb-3" style="z-index: 9999: max-width: 360px;">
+			<div class="position-absolute top-0 start-50 translate-middle-x container mb-3" style="z-index: 9999; max-width: 480px;">
 				<?php if(session()->has('success')): ?>
 					<div class="alert alert-success text-start alert-dismissible fade show" role="alert">
 						<?= session()->get('success') ?>

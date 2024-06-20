@@ -35,32 +35,32 @@
 					<div class="row">
 						<div class="col-sm-6 mb-3">
 							<label for="first-name" class="form-label">Nama Depan</label>
-							<input type="text" class="form-control" id="first-name" name="first-name" placeholder="" value="" required>
+							<input type="text" class="form-control" id="first-name" name="first-name" placeholder="" value="<?= $contents->billing->nama_depan ?? '' ?>" required>
 						</div>
 						<div class="col-sm-6 mb-3">
 							<label for="last-name" class="form-label">Last name</label>
-							<input type="text" class="form-control" id="last-name" name="last-name" placeholder="" value="" required>
+							<input type="text" class="form-control" id="last-name" name="last-name" placeholder="" value="<?= $contents->billing->nama_belakang ?? '' ?>" required>
 						</div>
 						<div class="col-12 mb-3">
 							<label for="phone" class="form-label">Telepon</label>
-							<input type="phone" class="form-control" id="phone" name="phone" placeholder="" required="">
+							<input type="phone" class="form-control" id="phone" name="phone" placeholder="" value="<?= $contents->billing->telepon ?? '' ?>" required="">
 						</div>
 						<div class="col-12 mb-3">
 							<label for="address" class="form-label">Alamat</label>
-							<input type="text" class="form-control" id="address" name="address" placeholder="" required="">
+							<input type="text" class="form-control" id="address" name="address" placeholder="" value="<?= $contents->billing->alamat ?? '' ?>" required="">
 						</div>
 						<div class="col-md-5 mb-3">
 							<label for="country" class="form-label">Negara</label>
-							<input type="text" class="form-control" id="country" name="country" placeholder="" required="">
+							<input type="text" class="form-control" id="country" name="country" placeholder="" value="<?= $contents->billing->negara ?? '' ?>" required="">
 						</div>
 						<div class="col-md-4 mb-3">
 							<label for="state" class="form-label">Provinsi</label>
-							<input type="text" class="form-control" id="state" name="state" placeholder="" required="">
+							<input type="text" class="form-control" id="state" name="state" placeholder="" value="<?= $contents->billing->provinsi ?? '' ?>" required="">
 						</div>
 						<div class="col-md-3 mb-3">
 							<label for="postcode" class="form-label">Kode POS</label>
-							<input type="text" class="form-control" id="postcode" name="postcode" placeholder="" required="">
-							<input type="hidden" class="form-control" id="amount" name="amount" value="29000" required>
+							<input type="text" class="form-control" id="postcode" name="postcode" placeholder="" value="<?= $contents->billing->zip ?? '' ?>" required="">
+							<input type="hidden" class="form-control" id="amount" name="amount" value="<?= $contents->total ?>" required>
 						</div>
 					</div>
 					<hr class="my-4">

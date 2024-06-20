@@ -9,7 +9,7 @@ class PaymentModel extends Model
     protected $table            = 'pembayaran';
     protected $primaryKey       = 'id';
     protected $allowedFields    = [
-        'id_user',
+        'id_pengguna',
         'token',
         'tanggal'
     ];

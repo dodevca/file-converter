@@ -18,7 +18,7 @@
 <body>
     <div class="d-flex align-items-start">
         <aside>
-            <div class="position-relative d-none d-lg-flex flex-column flex-shrink-0 bg-white shadow-lg p-3 vh-100" style="width: 280px;z-index: 9999;">
+            <div class="position-relative d-none d-lg-flex flex-column flex-shrink-0 bg-white border-end p-3 vh-100" style="width: 280px;z-index: 9999;">
                 <a class="navbar-brand" href="<?= base_url() ?>">
                     <img src="<?= base_url('apple-touch-icon.png') ?>" class="logo">
                     <span class="d-none d-lg-inline" style="font-size: 1.25rem;">Convy</span>
@@ -77,7 +77,7 @@
                                     <i class="bi bi-person-circle text-muted fs-3"></i>
                                 </button>
                                 <ul class="dropdown-menu border-0 shadow-lg dropdown-menu-end px-3">
-                                    <li><a class="dropdown-item rounded-3 bg-secondary bg-opacity-50 text-white" href="<?= base_url('pricing') ?>"><i class="bi bi<?=  $user->isSubscribe ? 'person-fill-up' : '-award-fill' ?> me-2"></i><?=  $user->isSubscribe ? 'Upgrade paket' : 'Berlanganan Sekarang' ?></a></li>
+                                    <li><a class="dropdown-item rounded-3 bg-secondary bg-opacity-50 text-white" href="<?= base_url('pricing') ?>"><i class="bi bi<?=  $user->isSubscribe ? '-person-fill-up' : '-award-fill' ?> me-2"></i><?=  $user->isSubscribe ? 'Upgrade paket' : 'Berlanganan Sekarang' ?></a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item text-danger" href="<?= base_url('logout') ?>"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
                                 </ul>
@@ -86,7 +86,22 @@
                     </div>
                 </nav>
             </header>
-            <main>
+            <main class="position-relative">
+                <?php if(session()->has('success') || session()->has('error')): ?>
+                    <div class="position-absolute top-0 start-50 translate-middle-x container mb-3" style="z-index: 9999; max-width: 480px;">
+                        <?php if(session()->has('success')): ?>
+                            <div class="alert alert-success text-start alert-dismissible fade show" role="alert">
+                                <?= session()->get('success') ?>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        <?php elseif(session()->has('error')): ?>
+                            <div class="alert alert-danger text-start alert-dismissible fade show" role="alert">
+                                <?= session()->get('error') ?>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+                <?php endif; ?>
                 <?= $this->renderSection('main') ?>
             </main>
         </div>

@@ -10,11 +10,12 @@ use App\Models\PackageModel;
 
 class Home extends BaseController
 {
-    protected $user, $subscription, $convert, $package;
+    protected $convert, $package;
 
     public function __construct()
     {
         $this->user     = new UserModel();
+        $this->subs     = new SubscriptionModel();
         $this->auth     = new AuthModel();
         $this->data     = [
             'meta'      => (object) [
@@ -23,8 +24,8 @@ class Home extends BaseController
             ],
             'user'      => (object) [
                 'id'            => $this->auth->data(),
-                // 'email'         => $this->user->info($this->auth->data(), 'email'),
-                // 'isSubscribe'   => $this->subscription->info($this->auth->data(), 'status')->status
+                'email'         => $this->user->info($this->auth->data(), 'email'),
+                'isSubscribe'   => $this->subs->for($this->auth->data(), 'status')->status ?? false
             ]
         ];
     }
@@ -81,7 +82,7 @@ class Home extends BaseController
         if($this->auth->login($email, $password))
             return redirect()->to('/')->with('success', 'Berhasil login');
         else
-            return redirect()->back()->with('error', 'Akun tidak ditemukan');
+            return redirect()->back()->with('error', 'Akun tidak terdaftar');
 
         // return $this->response->setJSON([$email, $password]);
     }
