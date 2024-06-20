@@ -1,4 +1,4 @@
-<?= $this->extend('layouts/app') ?>
+<?= $this->extend('layouts/main') ?>
 
 <?= $this->section('main') ?>
 <section class="jumbotron bg-white py-5">
@@ -8,7 +8,7 @@
 		<div class="card border-0 shadow-lg mt-4 mb-5 rounded-3">
 			<div class="card-body p-lg-5">
 				<div id="drop-area" class="text-center">
-					<input type="file" id="file-input" style="display: none;" accept="<?= $contents->file->accept != null ? join(', ', $contents->file->accept) : '*' ?>" multiple>
+					<input type="file" id="file-input" style="display: none;" multiple>
 					<button type="button" class="btn btn-secondary px-4 py-3" id="browse-button">
 						<i class="bi bi-file-earmark-plus-fill me-2"></i>Pilih file
 					</button>

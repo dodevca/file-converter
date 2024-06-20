@@ -1,4 +1,4 @@
-<?= $this->extend('layouts/app') ?>
+<?= $this->extend('layouts/main') ?>
 
 <?= $this->section('main') ?>
 <section class="jumbotron bg-white py-5">

@@ -42,14 +42,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	}
 
     const getFormatList = (source, container, badge) => {
-		fetch('/option?i=' + source)
+		fetch('/convert/option?i=' + source)
 		.then(response => response.json())
 		.then(data => {
 			container.insertAdjacentHTML('beforeend', '<p class="text-muted small m-0">Output:</p><select class="form-select" aria-label="Output"><option selected>...</option></select>')
 			
 			const selectElement = container.querySelector('select')
 
-			data.forEach(format => {
+			data.responses.forEach(format => {
 				const option        = document.createElement('option')
 				option.value        = format
 				option.textContent  = format.toUpperCase()
@@ -202,27 +202,27 @@ document.addEventListener('DOMContentLoaded', (event) => {
 				downloadArea.innerHTML = `
 					<h3 class="h5 text-center mb-4">File anda telah selesai dikonversi</h3>
 					<div class="d-flex align-items-center justify-content-center gap-3">
-						<button type="button" class="btn btn-outline-secondary rounded-circle px-2 py-1" onclick="location.reload();">
+						<button type="button" class="btn btn-outline-secondary rounded-circle px-2 py-1" onclick="location.reload()">
 							<i class="bi bi-chevron-compact-left"></i>
 						</button>
 						<a href="${data.responses}" class="btn btn-secondary px-4 py-3" id="download-button">
 							Download file
 						</a>
 					</div>
-				`;
+				`
 			} else {
 				downloadArea.innerHTML = `
 					<div class="alert alert-danger text-start alert-dismissible fade show" role="alert">
-						<strong>Error: </strong> ${data.responses}
+						<strong>Error: </strong> ${data.message}
 						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 					</div>
-				`;
+				`
 			}
 
 			console.log(data)
 
 			loading.style.display = 'none'
-			downloadArea.style.display = 'block';
+			downloadArea.style.display = 'block'
 		})
 		.catch(error => {
 			console.log(error)
