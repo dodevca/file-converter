@@ -10,7 +10,7 @@ class Payment extends BaseController
 {
     public function __construct()
     {
-        Config::$serverKey      = 'SB-Mid-server-oegwBnRRXpZWSHUijOc1Jq_5';
+        Config::$serverKey      = env('MIDTRANS_SERVER_KEY');
         Config::$isProduction   = false;
     }
 
