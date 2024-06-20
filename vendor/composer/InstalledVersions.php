@@ -27,12 +27,12 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '81b2219983939c1aaa41599a1de0735dec52db5f',
     'name' => 'codeigniter4/framework',
   ),
   'versions' => 
@@ -48,12 +48,12 @@ private static $installed = array (
     ),
     'codeigniter4/framework' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '81b2219983939c1aaa41599a1de0735dec52db5f',
     ),
     'composer/pcre' => 
     array (
@@ -162,6 +162,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'ee7a4c37bf3d0e8c03635d5bddb5bb3184ead490',
+    ),
+    'midtrans/midtrans-php' => 
+    array (
+      'pretty_version' => '2.5.2',
+      'version' => '2.5.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'a1ad0c824449ca8c68c4cf11b3417ad518311d2b',
     ),
     'mikey179/vfsstream' => 
     array (

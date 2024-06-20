@@ -20,43 +20,42 @@
 	<header class="bg-white">
 		<nav class="navbar navbar-expand-lg">
 			<div class="container-fluid">
-				<a class="navbar-brand" href="<?= base_url() ?>">
-					<img src="<?= base_url('apple-touch-icon.png') ?>" class="logo">
-					<span class="d-none d-lg-inline">Convy</span>
-				</a>
-				<button class="navbar-toggler border-0 ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link <?= $meta->name == 'home' ? 'active' : '' ?>" <?= $meta->name == 'home' ? 'active' : 'area-current="page"' ?> href="<?= base_url() ?>">Beranda</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link <?= $meta->name == 'pricing' ? 'active' : '' ?>" <?= $meta->name == 'pricing' ? 'active' : 'area-current="page"' ?> href="<?= base_url('pricing') ?>">Berlangganan</a>
-						</li>
-					</ul>
-					<?php if(empty($user->email)): ?>
-                    	<a href="javascript:;" class="btn btn-outline-primary rounded-3 mt-4 mt-lg-0 d-lg-none" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
-					<?php endif; ?>
+				<div>
+					<button class="navbar-toggler me-2 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<a class="navbar-brand" href="<?= base_url() ?>">
+						<img src="<?= base_url('apple-touch-icon.png') ?>" class="logo">
+						<span class="d-none d-lg-inline">Convy</span>
+					</a>
 				</div>
-                <div class="d-flex align-items-center justify-content-end profile">
+                <div class="profile d-flex align-items-center justify-content-end order-lg-1">
 					<?php if(empty($user->email)): ?>
-                    	<a href="javascript:;" class="btn btn-outline-primary rounded-3 d-none d-lg-block" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                    	<a href="javascript:;" class="btn btn-outline-primary rounded-3" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
 					<?php else: ?>
 						<div class="dropdown">
 							<button class="btn btn-link text-muted text-decoration-none dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 								<i class="bi bi-person-circle text-muted fs-3"></i>
 							</button>
 							<ul class="dropdown-menu border-0 shadow-lg dropdown-menu-end px-3">
-								<li><a class="dropdown-item rounded-3 bg-secondary bg-opacity-50 text-white" href="<?= base_url('pricing') ?>"><i class="bi bi-award-fill me-2"></i>Berlangganan sekarang</a></li>
-								<li><a class="dropdown-item" href="<?= base_url('dashboard') ?>"><i class="bi bi-gear me-2"></i>Dashboard</a></li>
+								<li><a class="dropdown-item rounded-3 bg-secondary bg-opacity-50 text-white" href="<?= base_url('pricing') ?>"><i class="bi bi<?=  $user->isSubscribe ? 'person-fill-up' : '-award-fill' ?> me-2"></i><?=  $user->isSubscribe ? 'Upgrade paket' : 'Berlanganan Sekarang' ?></a></li>
+								<li><a class="dropdown-item" href="<?= base_url('dashboard') ?>"><i class="bi bi-grid-1x2-fill me-2"></i>Dashboard</a></li>
 								<li><hr class="dropdown-divider"></li>
 								<li><a class="dropdown-item text-danger" href="<?= base_url('logout') ?>"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
 							</ul>
 						</div>
 					<?php endif; ?>
 			    </div>
+				<div class="collapse navbar-collapse justify-content-center p-3 p-lg-0 mt-3 mt-lg-0 rounded-3 shadow-lg" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link <?= $meta->name == 'home' ? 'active' : '' ?>" <?= $meta->name == 'home' ? 'area-current="page"' : '' ?> href="<?= base_url() ?>">Beranda</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link <?= $meta->name == 'pricing' ? 'active' : '' ?>" <?= $meta->name == 'pricing' ? 'area-current="page"' : '' ?> href="<?= base_url('pricing') ?>">Langganan</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -99,7 +98,7 @@
 								<input type="password" class="form-control" id="login-password" name="password" placeholder="Password" required>
 								<label for="password">Password</label>
 							</div>
-							<button type="submit" class="btn btn-primary w-100 mb-3">
+							<button type="submit" class="btn btn-primary w-100 px-4 py-3 mb-3">
 								Login
 							</button>
 						</form>
@@ -150,7 +149,7 @@
 									Dengan melanjutkan, Anda menyetujui Ketentuan Layanan dan Privasi kami.
 								</label>
 							</div>
-							<button type="submit" class="btn btn-primary w-100 mb-3">
+							<button type="submit" class="btn btn-primary w-100 px-4 py-3 mb-3">
 								Daftar Akun
 							</button>
 						</form>

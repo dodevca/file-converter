@@ -244,8 +244,17 @@ p {
 }
 
 @media screen and (min-width: 992px) {
+    aside {
+        position: sticky;
+        top: 0;
+    }
+
     .navbar
     .profile {
         min-width: 117.02px;
+    }
+
+    .navbar-collapse {
+        box-shadow: none !important;
     }
 }

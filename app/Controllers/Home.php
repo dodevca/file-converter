@@ -18,7 +18,8 @@ class Home extends BaseController
                 'name'  => ''
             ],
             'user'      => (object) [
-                'email' => $this->auth->data(),
+                'email'         => $this->auth->data(),
+                'isSubscribe'   => false
             ]
         ];
     }
@@ -34,8 +35,8 @@ class Home extends BaseController
 
     public function pricing()
     {
-        $this->data['meta']->name   = 'pricing';
         $this->data['meta']->title  = 'Berlangganan - Convy';
+        $this->data['meta']->name   = 'pricing';
 
         return view('pricing', $this->data);
     }

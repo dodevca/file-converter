@@ -30,103 +30,11 @@
                                 <i class="bi bi-check-circle text-success me-2"></i>Tanpa iklan
                             </li>
                         </ul>
-                        <button type="button" class="btn btn-outline-primary w-100">Berlangganan</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 mb-3">
-                <div class="card border-0 shadow-lg rounded-3">
-                    <div class="card-header bg-secondary border-0 text-center">
-                        <h4 class="text-white fw-bold mb-0">Standart</h4>
-                    </div>
-                    <div class="card-body">
-                        <div>
-                            <h3 class="text-primary mb-0">Rp.99.000</h3>
-                            <span class="small text-muted">/ bulan</span>
-                        </div>
-                        <ul class="list-unstyled my-3">
-                            <li class="mb-3">
-                                <i class="bi bi-check-circle text-success me-2"></i>5 GB ukuran masksimum
-                            </li>
-                            <li class="mb-3">
-                                <i class="bi bi-check-circle text-success me-2"></i>3000 menit konversi/Bulan
-                            </li>
-                            <li class="mb-3">
-                                <i class="bi bi-check-circle text-success me-2"></i>50 konversi sekaligus
-                            </li>
-                            <li class="mb-3">
-                                <i class="bi bi-check-circle text-success me-2"></i>Tanpa iklan
-                            </li>
-                            <li class="mb-3">
-                                <i class="bi bi-check-circle text-success me-2"></i>Kecepatan tinggi
-                            </li>
-                        </ul>
-                        <button type="button" class="btn btn-outline-primary w-100">Berlangganan</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 mb-3">
-                <div class="card border-0 shadow-lg rounded-3">
-                    <div class="card-header bg-secondary border-0 text-center">
-                        <h4 class="text-white fw-bold mb-0">Pro</h4>
-                    </div>
-                    <div class="card-body">
-                        <div>
-                            <h3 class="text-primary mb-0">Rp.199.000</h3>
-                            <span class="small text-muted">/ bulan</span>
-                        </div>
-                        <ul class="list-unstyled my-3">
-                            <li class="mb-3">
-                                <i class="bi bi-check-circle text-success me-2"></i>15 GB ukuran masksimum
-                            </li>
-                            <li class="mb-3">
-                                <i class="bi bi-check-circle text-success me-2"></i>10000 menit konversi/Bulan
-                            </li>
-                            <li class="mb-3">
-                                <i class="bi bi-check-circle text-success me-2"></i>100 konversi sekaligus
-                            </li>
-                            <li class="mb-3">
-                                <i class="bi bi-check-circle text-success me-2"></i>Tanpa iklan
-                            </li>
-                            <li class="mb-3">
-                                <i class="bi bi-check-circle text-success me-2"></i>Kecepatan tinggi
-                            </li>
-                        </ul>
-                        <button type="button" class="btn btn-outline-primary w-100">Berlangganan</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 mb-3">
-                <div class="card border-0 shadow-lg rounded-3">
-                    <div class="card-header bg-secondary border-0 text-center">
-                        <h4 class="text-white fw-bold mb-0">Ultra</h4>
-                    </div>
-                    <div class="card-body">
-                        <div>
-                            <h3 class="text-primary mb-0">Rp.399.000</h3>
-                            <span class="small text-muted">/ bulan</span>
-                        </div>
-                        <ul class="list-unstyled my-3">
-                            <li class="mb-3">
-                                <i class="bi bi-check-circle text-success me-2"></i>25 GB ukuran masksimum
-                            </li>
-                            <li class="mb-3">
-                                <i class="bi bi-check-circle text-success me-2"></i>25000 menit konversi/Bulan
-                            </li>
-                            <li class="mb-3">
-                                <i class="bi bi-check-circle text-success me-2"></i>100 konversi sekaligus
-                            </li>
-                            <li class="mb-3">
-                                <i class="bi bi-check-circle text-success me-2"></i>Tanpa iklan
-                            </li>
-                            <li class="mb-3">
-                                <i class="bi bi-check-circle text-success me-2"></i>Kecepatan super tinggi
-                            </li>
-                            <li class="mb-3">
-                                <i class="bi bi-check-circle text-success me-2"></i>Prioritas
-                            </li>
-                        </ul>
-                        <button type="button" class="btn btn-outline-primary w-100">Berlangganan</button>
+                        <?php if(empty($user->email)): ?>
+                            <button type="button" class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#loginModal">Berlangganan</button>
+                        <?php else: ?>
+                            <a href="<?= base_url('dashboard/payout?p=1') ?>" class="btn btn-outline-primary w-100">Berlangganan</a>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
