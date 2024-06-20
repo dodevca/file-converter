@@ -16,7 +16,7 @@
 						<span class="position-relative text-muted small bg-white p-2 z-2">atau</span>
 					</div>
 					<p class="mb-4">seret dan letakkan file di sini</p>
-					<?php if(empty($user->email)): ?>
+					<?php if(empty($user->id)): ?>
 						<div class="alert alert-warning text-center fade show" role="alert">
 							Maksimum ukuran 100 MB. <a href="/pricing"><strong>Berlangganan</strong></a> untuk mendapatkan lebih.
 						</div>
@@ -52,32 +52,32 @@
 		<div class="row text-center">
 			<div class="col-md-6 col-lg-4 p-3 mb-4">
 				<i class="bi bi-arrow-repeat fs-1 text-secondary"></i>
-				<h3 class="h5">300+ Format Didukung</h3>
+				<h5>300+ Format Didukung</h5>
 				<p class="text-tertiary m-0">Kami mendukung lebih dari 25.600 konversi berbeda antara lebih dari 300 format file berbeda. Lebih dari konverter lainnya.</p>
 			</div>
 			<div class="col-md-6 col-lg-4 p-3 mb-4">
 				<i class="bi bi-star fs-1 text-secondary"></i>
-				<h3 class="h5">Cepat dan mudah</h3>
+				<h5>Cepat dan mudah</h5>
 				<p class="text-tertiary m-0">Letakkan saja file Anda di halaman, pilih format keluaran dan klik tombol "Konversi". Tunggu sebentar hingga prosesnya selesai. Kami bertujuan untuk melakukan semua konversi kami dalam waktu kurang dari 1-2 menit.</p>
 			</div>
 			<div class="col-md-6 col-lg-4 p-3 mb-4">
 				<i class="bi bi-cloud-arrow-up fs-1 text-secondary"></i>
-				<h3 class="h5">Penyimpanan di Cloud</h3>
+				<h5>Penyimpanan di Cloud</h5>
 				<p class="text-tertiary m-0">Semua konversi terjadi di cloud dan tidak akan menghabiskan kapasitas apa pun dari komputer Anda.</p>
 			</div>
 			<div class="col-md-6 col-lg-4 p-3 mb-4">
 				<i class="bi bi-gear fs-1 text-secondary"></i>
-				<h3 class="h5">Pengaturan khusus</h3>
+				<h5>Pengaturan khusus</h5>
 				<p class="text-tertiary m-0">Sebagian besar jenis konversi mendukung opsi lanjutan. Misalnya dengan konverter video Anda dapat memilih kualitas, rasio aspek, codec dan pengaturan lainnya, memutar dan membalik.</p>
 			</div>
 			<div class="col-md-6 col-lg-4 p-3 mb-4">
 				<i class="bi bi-check-circle fs-1 text-secondary"></i>
-				<h3 class="h5">Keamanan terjamin</h3>
+				<h5>Keamanan terjamin</h5>
 				<p class="text-tertiary m-0">Kami menghapus file yang diunggah secara instan dan file yang dikonversi setelah 24 jam. Tidak ada seorang pun yang memiliki akses ke file Anda dan privasi dijamin 100%. Baca lebih lanjut tentang keamanan.</p>
 			</div>
 			<div class="col-md-6 col-lg-4 p-3 mb-4">
 				<i class="bi bi-display fs-1 text-secondary"></i>
-				<h3 class="h5">Semua perangkat didukung </h3>
+				<h5>Semua perangkat didukung </h5>
 				<p class="text-tertiary m-0">Convertio berbasis browser dan berfungsi untuk semua platform. Tidak perlu mengunduh dan menginstal perangkat lunak apa pun. </p>
 			</div>
 		</div>
@@ -289,7 +289,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		.then(data => {
 			if(data.status == 200 || data.status == '200') {
 				downloadArea.innerHTML = `
-					<h3 class="h5 text-center mb-4">File anda telah selesai dikonversi</h3>
+					<h3 class="h5 text-center mb-4">File anda telah selesai dikonversi</h5>
 					<div class="d-flex align-items-center justify-content-center gap-3">
 						<button type="button" class="btn btn-outline-secondary rounded-circle px-2 py-1" onclick="location.reload()">
 							<i class="bi bi-chevron-compact-left"></i>

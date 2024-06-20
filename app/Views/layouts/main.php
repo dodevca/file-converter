@@ -30,7 +30,7 @@
 					</a>
 				</div>
                 <div class="profile d-flex align-items-center justify-content-end order-lg-1">
-					<?php if(empty($user->email)): ?>
+					<?php if(empty($user->id)): ?>
                     	<a href="javascript:;" class="btn btn-outline-primary rounded-3" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
 					<?php else: ?>
 						<div class="dropdown">
@@ -59,7 +59,22 @@
 			</div>
 		</nav>
 	</header>
-	<main>
+	<main class="position-relative">
+		<?php if(session()->has('success') || session()->has('error')): ?>
+			<div class="position-absolute top-0 start-50 translate-middle-x container mb-3" style="z-index: 9999: max-width: 360px;">
+				<?php if(session()->has('success')): ?>
+					<div class="alert alert-success text-start alert-dismissible fade show" role="alert">
+						<?= session()->get('success') ?>
+						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+					</div>
+				<?php elseif(session()->has('error')): ?>
+					<div class="alert alert-danger text-start alert-dismissible fade show" role="alert">
+						<?= session()->get('error') ?>
+						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+					</div>
+				<?php endif; ?>
+			</div>
+		<?php endif; ?>
 		<?= $this->renderSection('main') ?>
 	</main>
 	<footer class="bg-tertiary pt-5">
@@ -67,7 +82,7 @@
 			<p class="text-muted text-center small mb-0">© 2024 Convy Converter ltd. Seluruh hak cipta.</p>
 		</div>
 	</footer>
-	<?php if(empty($user->email)): ?>
+	<?php if(empty($user->id)): ?>
 		<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-fullscreen">
 				<div class="modal-content border-0 shadow-lg">

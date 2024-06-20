@@ -3,14 +3,18 @@
 namespace App\Controllers;
 
 use App\Models\AuthModel;
+use App\Models\UserModel;
+use App\Models\SubscriptionModel;
 use App\Models\ConvertModel;
+use App\Models\PackageModel;
 
 class Home extends BaseController
 {
-    protected $convert;
+    protected $user, $subscription, $convert, $package;
 
     public function __construct()
     {
+        $this->user     = new UserModel();
         $this->auth     = new AuthModel();
         $this->data     = [
             'meta'      => (object) [
@@ -18,8 +22,9 @@ class Home extends BaseController
                 'name'  => ''
             ],
             'user'      => (object) [
-                'email'         => $this->auth->data(),
-                'isSubscribe'   => false
+                'id'            => $this->auth->data(),
+                // 'email'         => $this->user->info($this->auth->data(), 'email'),
+                // 'isSubscribe'   => $this->subscription->info($this->auth->data(), 'status')->status
             ]
         ];
     }
@@ -35,10 +40,15 @@ class Home extends BaseController
 
     public function pricing()
     {
+        $this->package              = new PackageModel();
         $this->data['meta']->title  = 'Berlangganan - Convy';
         $this->data['meta']->name   = 'pricing';
+        $this->data['contents']     = (object) [
+            'package' => $this->package->list()
+        ];
 
         return view('pricing', $this->data);
+        // return $this->response->setJSON($this->data);
     }
 
     public function login()
@@ -66,11 +76,13 @@ class Home extends BaseController
             return redirect()->back()->withInput()->with('error', $this->validator->getErrors());
 
         $email      = $this->request->getPost('email');
-        $password   = $this->request->getPost('password');
+        $password   = md5($this->request->getPost('password'));
 
-        $this->auth->login($email, $password);
+        if($this->auth->login($email, $password))
+            return redirect()->to('/')->with('success', 'Berhasil login');
+        else
+            return redirect()->back()->with('error', 'Akun tidak ditemukan');
 
-        return redirect()->to('/');
         // return $this->response->setJSON([$email, $password]);
     }
 

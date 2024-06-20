@@ -6,38 +6,57 @@
 		<h1 class="h3 fw-bold text-secondary text-center">Berlangganan dengan Convy</h1>
 		<h2 class="h4 text-center">Konversi file besar dengan cepat dalam kecepatan sangat tinggi.</h2>
         <div class="row mt-4 pt-3">
-            <div class="col-md-6 col-lg-3 mb-3">
-                <div class="card border-0 shadow-lg rounded-3">
-                    <div class="card-header bg-secondary border-0 text-center">
-                        <h4 class="text-white fw-bold mb-0">Basic</h4>
-                    </div>
-                    <div class="card-body">
-                        <div>
-                            <h3 class="text-primary mb-0">Rp.29.000</h3>
-                            <span class="small text-muted">/ bulan</span>
+            <?php foreach($contents->package as $p): ?>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <div class="card border-0 shadow-lg rounded-3">
+                        <div class="card-header bg-secondary border-0 text-center">
+                            <h4 class="text-white fw-bold mb-0"><?= ucwords($p->nama) ?></h4>
                         </div>
-                        <ul class="list-unstyled my-3">
-                            <li class="mb-3">
-                                <i class="bi bi-check-circle text-success me-2"></i>1 GB ukuran masksimum
-                            </li>
-                            <li class="mb-3">
-                                <i class="bi bi-check-circle text-success me-2"></i>1000 menit konversi/Bulan
-                            </li>
-                            <li class="mb-3">
-                                <i class="bi bi-check-circle text-success me-2"></i>10 konversi sekaligus
-                            </li>
-                            <li class="mb-3">
-                                <i class="bi bi-check-circle text-success me-2"></i>Tanpa iklan
-                            </li>
-                        </ul>
-                        <?php if(empty($user->email)): ?>
-                            <button type="button" class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#loginModal">Berlangganan</button>
-                        <?php else: ?>
-                            <a href="<?= base_url('dashboard/payout?p=1') ?>" class="btn btn-outline-primary w-100">Berlangganan</a>
-                        <?php endif; ?>
+                        <div class="card-body">
+                            <div>
+                                <h3 class="text-primary mb-0">Rp<?= number_format($p->harga, 0, ',', '.') ?></h3>
+                                <span class="small text-muted">/ bulan</span>
+                            </div>
+                            <ul class="list-unstyled my-3">
+                                <li class="mb-3">
+                                    <i class="bi bi-check-circle text-success me-2"></i>
+                                    <?php if($p->ukuran_maks > 0): ?>
+                                        <?= $p->ukuran_maks / 1000000000 ?> GB ukuran masksimum
+                                    <?php else: ?>
+                                        Unlimited
+                                    <?php endif; ?>
+                                </li>
+                                <li class="mb-3">
+                                    <i class="bi bi-check-circle text-success me-2"></i>
+                                    <?php if($p->menit_maks > 0): ?>
+                                        <?= $p->menit_maks ?> menit konversi/Bulan
+                                    <?php else: ?>
+                                        Unlimited
+                                    <?php endif; ?>
+                                </li>
+                                <li class="mb-3">
+                                    <i class="bi bi-check-circle text-success me-2"></i>
+                                    <?php if($p->konversi > 0): ?>
+                                        <?= $p->konversi ?> konversi sekaligus
+                                    <?php else: ?>
+                                        Unlimited
+                                    <?php endif; ?>
+                                </li>
+                                <?php if($p->kecepatan_tinggi): ?>
+                                    <li class="mb-3">
+                                        <i class="bi bi-check-circle text-success me-2"></i>Kecepatan tinggi
+                                    </li>
+                                <?php endif; ?>
+                            </ul>
+                            <?php if(empty($user->id)): ?>
+                                <button type="button" class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#loginModal">Berlangganan</button>
+                            <?php else: ?>
+                                <a href="<?= base_url('dashboard/payout?p=' . $p->id) ?>" class="btn btn-outline-primary w-100">Berlangganan</a>
+                            <?php endif; ?>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>
