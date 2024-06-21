@@ -1,59 +1,56 @@
 <?= $this->extend('layouts/dashboard') ?>
 
 <?= $this->section('main') ?>
-<h3 class="container">
-    Avilable Conversion Minute
-</h3>
-<p class="container">
-  20 Avilable conversion minutes for web <br>
-  989 Avilable conversion minute for API <br>
-  
-</p>
-<div class="container">
-  <h3>
-  Subscribtions
-</h3>
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">PACKAGE</th>
-      <th scope="col">NEXT RENEWAL</th>
-      <th scope="col">PRICE</th>
-      <th scope="col">STATUS</th>
-      <th scope="col">AVILABLE MINUTES</th>
-      <th scope="col">LastMETHOD</th>
-      <th scope="col">ACTION</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      
-      <td>API Subscription (100 Minutes)</td>
-      <td>19 Jul 2024</td>
-      <td>$8.00</td>
-      <td>active</td>
-      <td>989/1000</td>
-      <td><p><a class="stripe" href="#">Stripe</a></p></td>
-      <td>
-        <button type="button" class="btn btn-primary">Upgrade</button>
-        <button type="button" class="btn btn-danger">Cancel</button>
-      </td>
-      
-    </tr>
-    <tr>
-     
-      <td>Free(Web)</td>
-      <td>21 Jun 2024</td>
-      <td>$0</td>
-      <td>Active</td>
-      <td colspan="5">20/20</td>  
-      <td><button type="button" class="btn btn-primary">Upgrade</button></td>
-    </tr>
-   
-  </tbody>
-</table>
+<div class="container py-5">
+  <div class="card">
+    <div class="card-body">
+        <h3 class="h5">Menit Konversi Tersedia</h3>
+        <?php if($user->subscription): ?>
+          <p class="mb-0"><span class="fs-4 fw-bold"><?= $user->subscription->menit ?></span> / <?= $user->package->menit_maks ?> menit</p>
+        <?php else: ?>
+          <p><span class="fs-4 fw-bold">0</span> / 0 menit</p>
+          <p class="text-muted">Anda belum berlangganan paket apapun. Menit konversi file Anda sangat terbatas.</p>
+          <a href="<?= base_url('pricing') ?>" class="btn btn-outline-secondary">Berlangganan sekarang</a>
+        <?php endif; ?>
+    </div>
+  </div>
 </div>
-
+<div class="container py-5">
+  <div class="card">
+    <div class="card-body">
+      <h3 class="h5">Langganan</h3>
+      <?php if($user->subscription): ?>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Paket</th>
+              <th scope="col">Berakhir pada</th>
+              <th scope="col">Harga</th>
+              <th scope="col">Maks. Konversi</th>
+              <th scope="col">Maks. Ukuran File</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><?= $user->package->nama ?></td>
+              <td><?= date('d/m/Y', strtotime($user->subscription->tanggal_berakhir)) ?></td>
+              <td>Rp<?= number_format($user->package->harga, 0, ',', '.') ?></td>
+              <td><?= $user->package->konversi ?> file sekaligus</td>
+              <td><?= $user->package->ukuran_maks / 1000000000 ?> GB</td>
+              <td>
+                <a href="<?= base_url('pricing') ?>" class="btn btn-primary">Upgrade</a>
+                <a href="<?= base_url('dashboard/cancel') ?>" class="btn btn-outline-danger">Cancel</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      <?php else: ?>
+        <p class="text-muted text-center mb-0">Anda belum berlangganan paket apapun.</p>
+      <?php endif; ?>
+    </div>
+  </div>
+</div>
 <?= $this->endSection() ?>
 
 <?= $this->section('script') ?>

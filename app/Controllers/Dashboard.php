@@ -15,7 +15,9 @@ class Dashboard extends BaseController
     {
         $this->user     = new UserModel();
         $this->subs     = new SubscriptionModel();
+        $this->package  = new PackageModel();
         $this->auth     = new AuthModel();
+        $subscription   = $this->subs->info($this->auth->data()) ?? null;
         $this->data     = [
             'meta'      => (object) [
                 'title' => '',
@@ -24,7 +26,8 @@ class Dashboard extends BaseController
             'user'      => (object) [
                 'id'            => $this->auth->data(),
                 'email'         => $this->user->info($this->auth->data(), 'email')->email ?? null,
-                'subscription'  => $this->subs->info($this->auth->data()) ?? null
+                'subscription'  => $subscription,
+                'package'       => $subscription ? $this->package->info($subscription->id_paket) : null
             ]
         ];
     }

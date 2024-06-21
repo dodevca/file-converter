@@ -1,78 +1,76 @@
 <?= $this->extend('layouts/dashboard') ?>
 
 <?= $this->section('main') ?>
-<section class="bg-white">
-    <div class="container py-5">
-		<div class="row px-lg-3" id="payment-wrapper">
-			<div class="col-12" id="payment-alert">
-			</div>
-			<div class="col-md-5 col-lg-4 order-md-last">
-				<h4 class="h5 text-primary mb-3">Pembayaran</h4>
-				<ul class="list-group mb-3">
-					<li class="list-group-item d-flex justify-content-between lh-sm">
-						<div>
-							<h6 class="my-0">Paket <?= ucwords($contents->package->nama) ?></h6>
-							<small class="text-body-secondary">Bulanan</small>
-						</div>
-						<span class="text-body-secondary">Rp<?= number_format($contents->package->harga, 0, ',', '.') ?></span>
-					</li>
-					<li class="list-group-item d-flex justify-content-between lh-sm">
-						<div>
-							<h6 class="my-0">Pajak (PPN)</h6>
-							<small class="text-body-secondary">11%</small>
-						</div>
-						<span class="text-body-secondary">Rp<?= number_format($contents->tax, 0, ',', '.') ?></span>
-					</li>
-					<li class="list-group-item d-flex justify-content-between">
-						<span>Total</span>
-						<strong>Rp<?= number_format($contents->total, 0, ',', '.') ?></strong>
-					</li>
-				</ul>
-			</div>
-			<div class="col-md-7 col-lg-8">
-				<h4 class="h5 mb-3">Alamat Penagihan</h4>
-				<form id="payment-form" class="needs-validation" novalidate>
-					<div class="row">
-						<div class="col-sm-6 mb-3">
-							<label for="first-name" class="form-label">Nama Depan</label>
-							<input type="text" class="form-control" id="first-name" name="first-name" placeholder="" value="<?= $contents->billing->nama_depan ?? '' ?>" required>
-						</div>
-						<div class="col-sm-6 mb-3">
-							<label for="last-name" class="form-label">Last name</label>
-							<input type="text" class="form-control" id="last-name" name="last-name" placeholder="" value="<?= $contents->billing->nama_belakang ?? '' ?>" required>
-						</div>
-						<div class="col-12 mb-3">
-							<label for="phone" class="form-label">Telepon</label>
-							<input type="phone" class="form-control" id="phone" name="phone" placeholder="" value="<?= $contents->billing->telepon ?? '' ?>" required="">
-						</div>
-						<div class="col-12 mb-3">
-							<label for="address" class="form-label">Alamat</label>
-							<input type="text" class="form-control" id="address" name="address" placeholder="" value="<?= $contents->billing->alamat ?? '' ?>" required="">
-						</div>
-						<div class="col-md-5 mb-3">
-							<label for="country" class="form-label">Negara</label>
-							<input type="text" class="form-control" id="country" name="country" placeholder="" value="<?= $contents->billing->negara ?? '' ?>" required="">
-						</div>
-						<div class="col-md-4 mb-3">
-							<label for="city" class="form-label">Kota</label>
-							<input type="text" class="form-control" id="city" name="city" placeholder="" value="<?= $contents->billing->kota ?? '' ?>" required="">
-						</div>
-						<div class="col-md-3 mb-3">
-							<label for="postcode" class="form-label">Kode POS</label>
-							<input type="text" class="form-control" id="postcode" name="postcode" placeholder="" value="<?= $contents->billing->zip ?? '' ?>" required="">
-							<input type="hidden" class="form-control" id="amount" name="amount" value="<?= $contents->total ?>" required>
-						</div>
+<div class="container py-5">
+	<div class="row px-lg-3" id="payment-wrapper">
+		<div class="col-12" id="payment-alert">
+		</div>
+		<div class="col-md-5 col-lg-4 order-md-last">
+			<h4 class="h5 text-primary mb-3">Pembayaran</h4>
+			<ul class="list-group mb-3">
+				<li class="list-group-item d-flex justify-content-between lh-sm">
+					<div>
+						<h6 class="my-0">Paket <?= ucwords($contents->package->nama) ?></h6>
+						<small class="text-body-secondary">Bulanan</small>
 					</div>
-					<div class="form-check">
-						<input class="form-check-input" type="checkbox" id="save-info" value="save" <?= !$contents->billing->nama_depan ? 'checked' : '' ?>>
-						<label class="form-check-label" for="save-info">
-							Simpan alamat ini
-						</label>
+					<span class="text-body-secondary">Rp<?= number_format($contents->package->harga, 0, ',', '.') ?></span>
+				</li>
+				<li class="list-group-item d-flex justify-content-between lh-sm">
+					<div>
+						<h6 class="my-0">Pajak (PPN)</h6>
+						<small class="text-body-secondary">11%</small>
 					</div>
-					<hr class="my-4">
-					<button type="button" class="w-100 btn btn-primary px-4 py-3" id="pay-button">Lanjutkan pembayaran</button>
-				</form>
-			</div>
+					<span class="text-body-secondary">Rp<?= number_format($contents->tax, 0, ',', '.') ?></span>
+				</li>
+				<li class="list-group-item d-flex justify-content-between">
+					<span>Total</span>
+					<strong>Rp<?= number_format($contents->total, 0, ',', '.') ?></strong>
+				</li>
+			</ul>
+		</div>
+		<div class="col-md-7 col-lg-8">
+			<h4 class="h5 mb-3">Alamat Penagihan</h4>
+			<form id="payment-form" class="needs-validation" novalidate>
+				<div class="row">
+					<div class="col-sm-6 mb-3">
+						<label for="first-name" class="form-label">Nama Depan</label>
+						<input type="text" class="form-control" id="first-name" name="first-name" placeholder="" value="<?= $contents->billing->nama_depan ?? '' ?>" required>
+					</div>
+					<div class="col-sm-6 mb-3">
+						<label for="last-name" class="form-label">Last name</label>
+						<input type="text" class="form-control" id="last-name" name="last-name" placeholder="" value="<?= $contents->billing->nama_belakang ?? '' ?>" required>
+					</div>
+					<div class="col-12 mb-3">
+						<label for="phone" class="form-label">Telepon</label>
+						<input type="phone" class="form-control" id="phone" name="phone" placeholder="" value="<?= $contents->billing->telepon ?? '' ?>" required="">
+					</div>
+					<div class="col-12 mb-3">
+						<label for="address" class="form-label">Alamat</label>
+						<input type="text" class="form-control" id="address" name="address" placeholder="" value="<?= $contents->billing->alamat ?? '' ?>" required="">
+					</div>
+					<div class="col-md-5 mb-3">
+						<label for="country" class="form-label">Negara</label>
+						<input type="text" class="form-control" id="country" name="country" placeholder="" value="<?= $contents->billing->negara ?? '' ?>" required="">
+					</div>
+					<div class="col-md-4 mb-3">
+						<label for="city" class="form-label">Kota</label>
+						<input type="text" class="form-control" id="city" name="city" placeholder="" value="<?= $contents->billing->kota ?? '' ?>" required="">
+					</div>
+					<div class="col-md-3 mb-3">
+						<label for="postcode" class="form-label">Kode POS</label>
+						<input type="text" class="form-control" id="postcode" name="postcode" placeholder="" value="<?= $contents->billing->zip ?? '' ?>" required="">
+						<input type="hidden" class="form-control" id="amount" name="amount" value="<?= $contents->total ?>" required>
+					</div>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" id="save-info" value="save" <?= !$contents->billing->nama_depan ? 'checked' : '' ?>>
+					<label class="form-check-label" for="save-info">
+						Simpan alamat ini
+					</label>
+				</div>
+				<hr class="my-4">
+				<button type="button" class="w-100 btn btn-primary px-4 py-3" id="pay-button">Lanjutkan pembayaran</button>
+			</form>
 		</div>
 	</div>
 </div>

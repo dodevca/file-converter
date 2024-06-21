@@ -288,9 +288,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const form 			= new FormData()
 		convertBtn.disabled = true
 
+		if(sessionStorage.convertCount)
+			sessionStorage.convertCount = Number(sessionStorage.convertCount) + 1
+		else
+			sessionStorage.convertCount = 1
+		
+
 		<?php if(!$user->subscription): ?>
-			if(sessionStorage.convertCount > 5) {
-				let alertHTML	= `
+			if(sessionStorage.convertCount >= 3) {
+				let alertHTML = `
 					<div class="alert alert-danger text-start alert-dismissible fade show" role="alert">
 						Anda melbihi batas waktu konversi. <a href="/pricing"><strong>Berlangganan</strong></a> untuk mendapatkan lebih.
 						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -301,56 +307,53 @@ document.addEventListener('DOMContentLoaded', (event) => {
 			}
 		<?php endif; ?>
 
-		if(sessionStorage.convertCount)
-			sessionStorage.convertCount = Number(sessionStorage.convertCount) + 1
-		else
-			sessionStorage.convertCount = 1
-		
-		fileArea.style.display	= 'none'
-		loading.style.display 	= 'block'
+		if(sessionStorage.convertCount <= 3) {
+			fileArea.style.display	= 'none'
+			loading.style.display 	= 'block'
 
-		allFiles.forEach((e, i) => {
-			const fileOutput = fileList.children[i].querySelector('.file-output select').value
+			allFiles.forEach((e, i) => {
+				const fileOutput = fileList.children[i].querySelector('.file-output select').value
 
-			form.append('files[]', e)
-			form.append('formats[]', fileOutput)
-		})
+				form.append('files[]', e)
+				form.append('formats[]', fileOutput)
+			})
 
-		fetch('/convert', {
-			method: 'POST',
-			body: form
-		})
-		.then(response => response.json())
-		.then(data => {
-			if(data.status == 200 || data.status == '200') {
-				downloadArea.innerHTML = `
-					<h3 class="h5 text-center mb-4">File Anda telah selesai dikonversi</h5>
-					<div class="d-flex align-items-center justify-content-center gap-3">
-						<button type="button" class="btn btn-outline-secondary rounded-circle px-2 py-1" onclick="location.reload()">
-							<i class="bi bi-chevron-compact-left"></i>
-						</button>
-						<a href="${data.responses}" class="btn btn-secondary px-4 py-3" id="download-button">
-							Download file
-						</a>
-					</div>
-				`
-			} else {
-				downloadArea.innerHTML = `
-					<div class="alert alert-danger text-start alert-dismissible fade show" role="alert">
-						<strong>Error: </strong> ${data.message}
-						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-					</div>
-				`
-			}
+			fetch('/convert', {
+				method: 'POST',
+				body: form
+			})
+			.then(response => response.json())
+			.then(data => {
+				if(data.status == 200 || data.status == '200') {
+					downloadArea.innerHTML = `
+						<h3 class="h5 text-center mb-4">File Anda telah selesai dikonversi</h5>
+						<div class="d-flex align-items-center justify-content-center gap-3">
+							<button type="button" class="btn btn-outline-secondary rounded-circle px-2 py-1" onclick="location.reload()">
+								<i class="bi bi-chevron-compact-left"></i>
+							</button>
+							<a href="${data.responses}" class="btn btn-secondary px-4 py-3" id="download-button">
+								Download file
+							</a>
+						</div>
+					`
+				} else {
+					downloadArea.innerHTML = `
+						<div class="alert alert-danger text-start alert-dismissible fade show" role="alert">
+							<strong>Error: </strong> ${data.message}
+							<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+						</div>
+					`
+				}
 
-			console.log(data)
+				console.log(data)
 
-			loading.style.display = 'none'
-			downloadArea.style.display = 'block'
-		})
-		.catch(error => {
-			console.log(error)
-		})
+				loading.style.display = 'none'
+				downloadArea.style.display = 'block'
+			})
+			.catch(error => {
+				console.log(error)
+			})
+		}
     }
 
     // drag and drop events
