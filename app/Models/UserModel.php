@@ -16,7 +16,7 @@ class UserModel extends Model
         'telepon', 
         'alamat',
         'negara',
-        'provinsi',
+        'kota',
         'zip'
     ];
     protected $useTimestamps    = false;

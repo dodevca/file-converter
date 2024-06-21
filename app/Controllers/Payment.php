@@ -7,6 +7,7 @@ use App\Models\SubscriptionModel;
 use App\Models\PaymentModel;
 use App\Models\PackageModel;
 use App\Models\UserModel;
+use App\Models\CountryModel;
 use Midtrans\Config;
 use Midtrans\Snap;
 
@@ -27,20 +28,26 @@ class Payment extends BaseController
         if(!$params)
             return $this->response->setJSON(['status' => 400, 'message' => 'Data tidak valid']);
         
-        $this->user = new UserModel();
         
-        $this->user->update($params->user->id, [
-            'nama_depan'    => $params->customer_details->billing_address->first_name,
-            'nama_belakang' => $params->customer_details->billing_address->last_name,
-            'telepon'       => $params->customer_details->billing_address->phone, 
-            'alamat'        => $params->customer_details->billing_address->address,
-            'negara'        => 'Indonesia',
-            'provinsi'      => $params->customer_details->billing_address->state,
-            'zip'           => $params->customer_details->billing_address->postal_code
-        ]);
+        if($params['user']['save']) {
+            $this->user = new UserModel();
+
+            $this->user->update($params['user']['id'], [
+                'nama_depan'    => $params['customer_details']['billing_address']['first_name'],
+                'nama_belakang' => $params['customer_details']['billing_address']['last_name'],
+                'telepon'       => $params['customer_details']['billing_address']['phone'],
+                'alamat'        => $params['customer_details']['billing_address']['address'],
+                'negara'        => $params['customer_details']['billing_address']['country_code'],
+                'kota'          => $params['customer_details']['billing_address']['city'],
+                'zip'           => $params['customer_details']['billing_address']['postal_code']
+            ]);
+        }
         
-        unset($params->user);
+        unset($params['user']);
         
+        $this->country                                                  = new CountryModel();
+        $params['customer_details']['billing_address']['country_code']  = $this->country->isoOf($params['customer_details']['billing_address']['country_code']);
+
         try {
             $data = Snap::getSnapToken($params);
 
@@ -49,7 +56,7 @@ class Payment extends BaseController
             return $this->response->setJSON(['status' => 400, 'message' => $e->getMessage()]);
         }
 
-        // return $this->response->setJSON([env('MIDTRANS_SERVER_KEY')]);
+        // return $this->response->setJSON($params);
     }
 
     public function finish()

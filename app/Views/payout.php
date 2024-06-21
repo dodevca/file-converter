@@ -54,14 +54,20 @@
 							<input type="text" class="form-control" id="country" name="country" placeholder="" value="<?= $contents->billing->negara ?? '' ?>" required="">
 						</div>
 						<div class="col-md-4 mb-3">
-							<label for="state" class="form-label">Provinsi</label>
-							<input type="text" class="form-control" id="state" name="state" placeholder="" value="<?= $contents->billing->provinsi ?? '' ?>" required="">
+							<label for="city" class="form-label">Kota</label>
+							<input type="text" class="form-control" id="city" name="city" placeholder="" value="<?= $contents->billing->kota ?? '' ?>" required="">
 						</div>
 						<div class="col-md-3 mb-3">
 							<label for="postcode" class="form-label">Kode POS</label>
 							<input type="text" class="form-control" id="postcode" name="postcode" placeholder="" value="<?= $contents->billing->zip ?? '' ?>" required="">
 							<input type="hidden" class="form-control" id="amount" name="amount" value="<?= $contents->total ?>" required>
 						</div>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="save-info" value="save" <?= !$contents->billing->nama_depan ? 'checked' : '' ?>>
+						<label class="form-check-label" for="save-info">
+							Simpan alamat ini
+						</label>
 					</div>
 					<hr class="my-4">
 					<button type="button" class="w-100 btn btn-primary px-4 py-3" id="pay-button">Lanjutkan pembayaran</button>
@@ -108,9 +114,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		let email 		= "<?= $user->email ?>"
 		let address 	= document.getElementById('address').value
 		let country 	= document.getElementById('country').value
-		let state 		= document.getElementById('state').value
+		let city 		= document.getElementById('city').value
 		let postcode 	= document.getElementById('postcode').value
 		let amount 		= document.getElementById('amount').value
+		let saveInfo	= document.getElementById('save-info').checked
 
 		let paymentData = {
 			transaction_details: {
@@ -126,15 +133,16 @@ document.addEventListener('DOMContentLoaded', () => {
 					first_name: firstName,
 					last_name: lastName,
 					address: address,
-					city: state,
+					city: city,
 					postal_code: postcode,
 					phone: phone,
-					country_code: "IDN"
+					country_code: country
 				}
 			},
 			user: {
-			    id: userId
-			} 
+			    id: userId,
+				save: saveInfo
+			}
 		}
 
 		fetch('<?= base_url('payment') ?>', {
