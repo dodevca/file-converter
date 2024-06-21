@@ -1,7 +1,8 @@
 <?= $this->extend('layouts/dashboard') ?>
 
 <?= $this->section('main') ?>
-<table class="table">
+<div class="container">
+  <table class="table">
   <thead>
     <tr>
       <th scope="col">INVOICE DATE</th>
@@ -23,6 +24,8 @@
     </tr>
   </tbody>
 </table>
+</div>
+
 <?= $this->endSection() ?>
 
 <?= $this->section('script') ?>
