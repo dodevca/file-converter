@@ -56,7 +56,6 @@ class Dashboard extends BaseController
                 return redirect()->to('pricing')->with('error', 'Anda sedang menggunakan paket yang sama');
         }
 
-
         $this->package              = new PackageModel();
         $this->data['meta']->title  = 'Bayar - Convy';
         $this->data['meta']->name   = 'payout';

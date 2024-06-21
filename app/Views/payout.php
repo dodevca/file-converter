@@ -101,6 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		payForm.classList.remove('was-validated')
 
+        let userId      = parseInt('<?= $user->id ?>')
 		let firstName	= document.getElementById('first-name').value
 		let lastName	= document.getElementById('last-name').value
 		let phone 		= document.getElementById('phone').value
@@ -130,7 +131,10 @@ document.addEventListener('DOMContentLoaded', () => {
 					phone: phone,
 					country_code: "IDN"
 				}
-			}
+			},
+			user: {
+			    id: userId
+			} 
 		}
 
 		fetch('<?= base_url('payment') ?>', {

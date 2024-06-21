@@ -6,12 +6,13 @@ use App\Models\AuthModel;
 use App\Models\SubscriptionModel;
 use App\Models\PaymentModel;
 use App\Models\PackageModel;
+use App\Models\UserModel;
 use Midtrans\Config;
 use Midtrans\Snap;
 
 class Payment extends BaseController
 {
-    protected $subs;
+    protected $subs, $user;
 
     public function __construct()
     {
@@ -25,7 +26,21 @@ class Payment extends BaseController
 
         if(!$params)
             return $this->response->setJSON(['status' => 400, 'message' => 'Data tidak valid']);
-    
+        
+        $this->user = new UserModel();
+        
+        $this->user->update($params->user->id, [
+            'nama_depan'    => $params->customer_details->billing_address->first_name,
+            'nama_belakang' => $params->customer_details->billing_address->last_name,
+            'telepon'       => $params->customer_details->billing_address->phone, 
+            'alamat'        => $params->customer_details->billing_address->address,
+            'negara'        => 'Indonesia',
+            'provinsi'      => $params->customer_details->billing_address->state,
+            'zip'           => $params->customer_details->billing_address->postal_code
+        ]);
+        
+        unset($params->user);
+        
         try {
             $data = Snap::getSnapToken($params);
 
