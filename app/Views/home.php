@@ -108,6 +108,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const addBtn        = document.getElementById('add-button')
     const browseBtn     = document.getElementById('browse-button')
 	const convertBtn	= document.getElementById('convert-button')
+	let allFiles		= []
 
     // functions
     const preventDefaults = (e) => {
@@ -207,6 +208,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
 				removeLink.innerHTML    = '<i class="bi bi-x-circle opacity-75"></i>'
 				removeLink.classList.add('text-danger', 'order-3', 'order-md-4')
 				removeLink.addEventListener('click', () => {
+					const index = allFiles.indexOf(file)
+
+                    if(index > -1)
+                        allFiles.splice(index, 1)
+
 					li.remove()
 					countFile()
 					fileListToggle()
@@ -267,6 +273,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 				dropArea.insertAdjacentHTML('afterbegin', alertHTML)
 				fileArea.insertAdjacentHTML('afterbegin', alertHTML)
 			} else {
+                allFiles.push(f)
 				previewPromises.push(showFile(f))
 			}
 		})
@@ -295,17 +302,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		<?php endif; ?>
 
 		if(sessionStorage.convertCount)
-			sessionStorage.convertCount = Number(sessionStorage.convertCount) + 1;
+			sessionStorage.convertCount = Number(sessionStorage.convertCount) + 1
 		else
-			sessionStorage.convertCount = 1;
+			sessionStorage.convertCount = 1
 		
 		fileArea.style.display	= 'none'
 		loading.style.display 	= 'block'
 
-		document.querySelectorAll('.file-wrapper').forEach((e, i) => {
-			const fileOutput = e.querySelector('.file-output select').value
+		allFiles.forEach((e, i) => {
+			const fileOutput = fileList.children[i].querySelector('.file-output select').value
 
-			form.append('files[]', fileInput.files[i])
+			form.append('files[]', e)
 			form.append('formats[]', fileOutput)
 		})
 
@@ -317,7 +324,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		.then(data => {
 			if(data.status == 200 || data.status == '200') {
 				downloadArea.innerHTML = `
-					<h3 class="h5 text-center mb-4">File anda telah selesai dikonversi</h5>
+					<h3 class="h5 text-center mb-4">File Anda telah selesai dikonversi</h5>
 					<div class="d-flex align-items-center justify-content-center gap-3">
 						<button type="button" class="btn btn-outline-secondary rounded-circle px-2 py-1" onclick="location.reload()">
 							<i class="bi bi-chevron-compact-left"></i>

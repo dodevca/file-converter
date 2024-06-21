@@ -77,9 +77,7 @@
                                     <i class="bi bi-person-circle text-muted fs-3"></i>
                                 </button>
                                 <ul class="dropdown-menu border-0 shadow-lg dropdown-menu-end px-3">
-								    <?php if($user->subscription->id_paket < 4): ?>
-                                        <li><a class="dropdown-item rounded-3 bg-secondary bg-opacity-50 text-white" href="<?= base_url('pricing') ?>"><i class="bi bi<?=  $user->subscription ? '-person-fill-up' : '-award-fill' ?> me-2"></i><?=  $user->subscription ? 'Upgrade paket' : 'Berlanganan Sekarang' ?></a></li>
-                                    <?php endif; ?>
+                                    <li><a class="dropdown-item rounded-3 bg-secondary bg-opacity-50 text-white" href="<?= base_url('pricing') ?>"><i class="bi bi<?=  $user->subscription ? '-person-fill-up' : '-award-fill' ?> me-2"></i><?=  $user->subscription ? 'Upgrade paket' : 'Berlanganan Sekarang' ?></a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item text-danger" href="<?= base_url('logout') ?>"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
                                 </ul>

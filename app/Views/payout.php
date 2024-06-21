@@ -11,14 +11,14 @@
 				<ul class="list-group mb-3">
 					<li class="list-group-item d-flex justify-content-between lh-sm">
 						<div>
-							<h6 class="my-0">Paket <?= $contents->package->nama ?></h6>
+							<h6 class="my-0">Paket <?= ucwords($contents->package->nama) ?></h6>
 							<small class="text-body-secondary">Bulanan</small>
 						</div>
 						<span class="text-body-secondary">Rp<?= number_format($contents->package->harga, 0, ',', '.') ?></span>
 					</li>
 					<li class="list-group-item d-flex justify-content-between lh-sm">
 						<div>
-							<h6 class="my-0">Pajak</h6>
+							<h6 class="my-0">Pajak (PPN)</h6>
 							<small class="text-body-secondary">11%</small>
 						</div>
 						<span class="text-body-secondary">Rp<?= number_format($contents->tax, 0, ',', '.') ?></span>

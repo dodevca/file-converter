@@ -69,9 +69,10 @@ class Home extends BaseController
                 ]
             ],
             'password'  => [
-                'rules'     => 'required',
+                'rules'     => 'required|min_length[8]',
                 'errors'    => [
-                    'required' => 'Password salah.'
+                    'required'      => 'Password harus diisi.',
+                    'min_length'    => 'Minimal password 8 karakter'
                 ]
             ]
         ];
@@ -79,10 +80,7 @@ class Home extends BaseController
         if(!$this->validate($rules))
             return redirect()->back()->withInput()->with('error', $this->validator->getErrors());
 
-        $email      = $this->request->getPost('email');
-        $password   = md5($this->request->getPost('password'));
-
-        if($this->auth->login($email, $password))
+        if($this->auth->login($this->request->getPost('email'), md5($this->request->getPost('password'))))
             return redirect()->to('/')->with('success', 'Berhasil login');
         else
             return redirect()->back()->with('error', 'Akun tidak terdaftar');
@@ -92,7 +90,39 @@ class Home extends BaseController
 
     public function signup()
     {
+        if(!empty($this->data['user']->id))
+            return redirect()->to('/');
+        
+        $rules = [
+            'email'     => [
+                'rules'     => 'required|valid_email',
+                'errors'    => [
+                    'required'      => 'Email tidak boleh kosong. Masukkan email yang terdaftar',
+                    'valid_email'   => 'Email tidak terdaftar. Pastikan penulisan format email benar.'
+                ]
+            ],
+            'password'  => [
+                'rules'     => 'required|min_length[8]|matches[password-match]',
+                'errors'    => [
+                    'required'      => 'Password tidak boleh kosong.',
+                    'min_length'    => 'Minimal password 8 karakter.',
+                    'matches'       => 'Pastikan password Anda cocok.'
+                ]
+            ]
+        ];
 
+        if(!$this->validate($rules))
+            return redirect()->back()->withInput()->with('error', $this->validator->getErrors());
+        
+        if($this->user->insert([
+            'email'     => $this->request->getPost('email'),
+            'password'  => md5($this->request->getPost('password'))
+        ]))
+            return redirect()->to('/')->with('success', 'Berhasil membuat akun. Silahkan login.');
+        else
+            return redirect()->back()->with('error', 'Terjadi kesalahan. Coba kembali nanti.');
+
+        // return $this->response->setJSON([$email, $password]);
     }
 
     public function logout()
