@@ -17,7 +17,7 @@
     <tr>
       <th scope="row">2024-06-19T00:58:06:201Z</th>
       <td>66722D1e897595c2ddb4c00</td>
-      <td>8</td>
+      <td>Rp8.000,00</td>
       <td>LUNAS</td>
       <td>Stripe</td>
       <td><button type="button" class="btn btn-outline-secondary">PDF</button></td>
