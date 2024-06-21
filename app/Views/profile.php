@@ -17,31 +17,31 @@
             <div class="col-md-6">
                 <h2>Billing Info</h2>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Rio Ananda</label>
+                    <label for="exampleFormControlInput1" class="form-label">Name</label>
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Rio Ananda">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Tax/VAT ID</label>
+                    <label for="exampleFormControlInput1" class="form-label">Payment</label>
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Tax/VAT ID">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Sinduadi</label>
+                    <label for="exampleFormControlInput1" class="form-label">Village</label>
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Sinduadi">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Mlati</label>
+                    <label for="exampleFormControlInput1" class="form-label">Address</label>
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Mlati">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Sleman</label>
+                    <label for="exampleFormControlInput1" class="form-label">Regency</label>
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Sleman">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Yogyakarta</label>
+                    <label for="exampleFormControlInput1" class="form-label">City</label>
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Yogyakarta">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlSelect1" class="form-label">Indonesia</label>
+                    <label for="exampleFormControlSelect1" class="form-label">Reguion</label>
                     <select class="form-select" id="exampleFormControlSelect1">
                         <option value="indonesia">Indonesia</option>
                         <option value="malaysia">Malaysia</option>
