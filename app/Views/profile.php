@@ -41,7 +41,7 @@
                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Yogyakarta">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlSelect1" class="form-label">Reguion</label>
+                    <label for="exampleFormControlSelect1" class="form-label">Region</label>
                     <select class="form-select" id="exampleFormControlSelect1">
                         <option value="indonesia">Indonesia</option>
                         <option value="malaysia">Malaysia</option>
