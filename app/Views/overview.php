@@ -1,10 +1,10 @@
 <?= $this->extend('layouts/dashboard') ?>
 
 <?= $this->section('main') ?>
-<h3>
+<h3 class="center">
     Avilable Conversion Minute
 </h3>
-<p>
+<p class="center">
   20 Avilable conversion minutes for web <br>
   989 Avilable conversion minute for API <br>
   
