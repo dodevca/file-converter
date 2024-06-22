@@ -298,7 +298,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 			if(sessionStorage.convertCount >= 3) {
 				let alertHTML = `
 					<div class="alert alert-danger text-start alert-dismissible fade show" role="alert">
-						Anda melbihi batas waktu konversi. <a href="/pricing"><strong>Berlangganan</strong></a> untuk mendapatkan lebih.
+						Anda terlalu banyak melakukan konversi. <a href="/pricing"><strong>Berlangganan</strong></a> untuk mendapatkan lebih.
 						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 					</div>
 				`
