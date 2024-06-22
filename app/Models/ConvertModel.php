@@ -7,8 +7,11 @@ use \ConvertApi\ConvertApi;
 
 class ConvertModel extends Model
 {
-    private $apiKey     = 'api_production_3194212f7967fb10f9992a4c68ca5d81ce4e00d79558aa5e1cbd8a7b68461a87.66453c39fd110c63bdd75a8f.66714753ec714decadba825f';
-    private $baseUrl    = 'https://api.freeconvert.com/v1/';
+    public function __construct()
+    {
+        $this->$apiKey  = env('MIDTRANS_SERVER_KEY');
+        $this->$baseUrl = 'https://api.freeconvert.com/v1/';
+    }
 
     public function option($input): ?array
     {
