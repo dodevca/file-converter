@@ -1,29 +1,36 @@
 <?= $this->extend('layouts/dashboard') ?>
 
 <?= $this->section('main') ?>
-<div class="container">
-  <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">TANGGAL</th>
-      <th scope="col">TOKEN</th>
-      <th scope="col">HARGA</th>
-      <th scope="col">STATUS</th>
-      <th scope="col">METHOD</th>
-      <th scope="col">DOWNLOAD</th>
-    </tr>
-  </thead>
-  <tbody class="table-group-divider">
-    <tr>
-      <th scope="row">2024-06-19T00:58:06:201Z</th>
-      <td>66722D1e897595c2ddb4c00</td>
-      <td>Rp8.000,00</td>
-      <td>LUNAS</td>
-      <td>Stripe</td>
-      <td><button type="button" class="btn btn-outline-secondary">PDF</button></td>
-    </tr>
-  </tbody>
-</table>
+<div class="container pt-5">
+  <div class="card">
+    <div class="card-body overflow-auto">
+      <h3 class="h5">Daftar pembayaran paket</h3>
+      <?php if(!empty($contents)): ?>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Tanggal</th>
+              <th scope="col">Harga</th>
+              <th scope="col">Metode</th>
+              <th scope="col">Paket</th>
+            </tr>
+          </thead>
+          <tbody class="table-group-divider">
+            <?php foreach($contents as $p): ?>
+              <tr>
+                <td><?= date('d-m-Y H:i', strtotime($p->tanggal)) ?></td>
+                <td>Rp<?= number_format($p->total, 0, ',', '.') ?></td>
+                <td><?= $p->metode ?></td>
+                <td><?= ucwords($p->paket) ?></td>
+              </tr>
+            <?php endforeach; ?>
+          </tbody>
+        </table>
+      <?php else: ?>
+        <p class="text-muted text-center mb-0">Anda belum melakukan transaksi apapun.</p>
+      <?php endif; ?>
+    </div>
+  </div>
 </div>
 
 <?= $this->endSection() ?>

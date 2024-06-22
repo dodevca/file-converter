@@ -50,7 +50,12 @@
 					</div>
 					<div class="col-md-5 mb-3">
 						<label for="country" class="form-label">Negara</label>
-						<input type="text" class="form-control" id="country" name="country" placeholder="" value="<?= $contents->billing->negara ?? '' ?>" required="">
+						<select class="form-select" id="country" name="country" required>
+							<option selected>Pilih negara</option>
+							<?php foreach($contents->country as $c): ?>
+								<option value="<?= $c->nama ?>"><?= $c->nama ?></option>
+							<?php endforeach; ?>
+						</select>
 					</div>
 					<div class="col-md-4 mb-3">
 						<label for="city" class="form-label">Kota</label>
@@ -159,6 +164,8 @@ document.addEventListener('DOMContentLoaded', () => {
 				onSuccess: function(result) {
 					result.user_id 		= parseInt('<?= $user->id ?>')
 					result.package_id 	= parseInt('<?= $contents->package->id ?>')
+
+					console.log(result)
 
 					fetch('<?= base_url('payment/finish') ?>', {
                         method: 'POST',

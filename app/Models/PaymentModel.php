@@ -11,8 +11,16 @@ class PaymentModel extends Model
     protected $allowedFields    = [
         'id_pengguna',
         'token',
-        'tanggal'
+        'total',
+        'tanggal',
+        'metode',
+        'id_paket'
     ];
     protected $useTimestamps    = false;
     protected $returnType       = 'object';
+
+    public function list($userId, $sort = 'asc'): ?array
+    {
+        return $this->where('id_pengguna', $userId)->orderBy('tanggal', $sort)->findAll() ?? [];
+    }
 }

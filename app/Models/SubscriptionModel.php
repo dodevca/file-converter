@@ -28,6 +28,6 @@ class SubscriptionModel extends Model
 
     public function used($userId, $minutes)
     {
-        return $this->where('id_pengguna', $userId)->set(['menit' => $minutes])->update();
+        $this->where('id_pengguna', $userId)->set(['menit' => $minutes])->update();
     }
 }

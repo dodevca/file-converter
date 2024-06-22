@@ -13,9 +13,11 @@ $routes->get('logout', 'Home::logout');
 
 $routes->group('dashboard', static function($routes) {
     $routes->get('/', 'Dashboard::index');
-    $routes->get('payout', 'Dashboard::payout');
     $routes->get('payment', 'Dashboard::payment');
     $routes->get('profile', 'Dashboard::profile');
+    $routes->get('payout', 'Dashboard::payout');
+    $routes->get('cancel', 'Dashboard::cancel');
+    $routes->post('update', 'Dashboard::update');
 });
 
 $routes->group('convert', static function($routes) {

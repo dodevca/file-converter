@@ -80,7 +80,10 @@ class Payment extends BaseController
             $data['payment']    = $this->payment->insert([
                 'id_pengguna'   => $params['user_id'],
                 'token'         => $params['transaction_id'],
-                'tanggal'       => $params['transaction_time']
+                'tanggal'       => $params['transaction_time'],
+                'total'         => $params['gross_amount'],
+                'metode'        => ucwords(str_replace('_', ' ', $params['payment_type'])),
+                'id_paket'      => $params['package_id']
             ]);
 
             return $this->response->setJSON(['status' => 200, 'responses' => $data]);

@@ -15,9 +15,9 @@
     </div>
   </div>
 </div>
-<div class="container py-5">
+<div class="container pt-4">
   <div class="card">
-    <div class="card-body">
+    <div class="card-body overflow-auto">
       <h3 class="h5">Langganan</h3>
       <?php if($user->subscription): ?>
         <table class="table">
@@ -33,7 +33,7 @@
           </thead>
           <tbody>
             <tr>
-              <td><?= $user->package->nama ?></td>
+              <td><?= ucwords($user->package->nama) ?></td>
               <td><?= date('d/m/Y', strtotime($user->subscription->tanggal_berakhir)) ?></td>
               <td>Rp<?= number_format($user->package->harga, 0, ',', '.') ?></td>
               <td><?= $user->package->konversi ?> file sekaligus</td>

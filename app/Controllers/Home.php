@@ -65,20 +65,20 @@ class Home extends BaseController
                 'rules'     => 'required|valid_email',
                 'errors'    => [
                     'required'      => 'Email tidak boleh kosong. Masukkan email yang terdaftar',
-                    'valid_email'   => 'Email tidak terdaftar. Pastikan penulisan format email benar.'
+                    'valid_email'   => 'Email tidak terdaftar. Pastikan penulisan format email benar'
                 ]
             ],
             'password'  => [
                 'rules'     => 'required|min_length[8]',
                 'errors'    => [
-                    'required'      => 'Password harus diisi.',
+                    'required'      => 'Password harus diisi',
                     'min_length'    => 'Minimal password 8 karakter'
                 ]
             ]
         ];
 
         if(!$this->validate($rules))
-            return redirect()->back()->withInput()->with('error', $this->validator->getErrors());
+            return redirect()->back()->withInput()->with('error', implode('<br>', $this->validator->getErrors()));
 
         if($this->auth->login($this->request->getPost('email'), md5($this->request->getPost('password'))))
             return redirect()->to('/')->with('success', 'Berhasil login');
@@ -98,29 +98,29 @@ class Home extends BaseController
                 'rules'     => 'required|valid_email',
                 'errors'    => [
                     'required'      => 'Email tidak boleh kosong. Masukkan email yang terdaftar',
-                    'valid_email'   => 'Email tidak terdaftar. Pastikan penulisan format email benar.'
+                    'valid_email'   => 'Email tidak terdaftar. Pastikan penulisan format email benar'
                 ]
             ],
             'password'  => [
                 'rules'     => 'required|min_length[8]|matches[password-match]',
                 'errors'    => [
-                    'required'      => 'Password tidak boleh kosong.',
-                    'min_length'    => 'Minimal password 8 karakter.',
-                    'matches'       => 'Pastikan password Anda cocok.'
+                    'required'      => 'Password tidak boleh kosong',
+                    'min_length'    => 'Minimal password 8 karakter',
+                    'matches'       => 'Pasword tidak cocok'
                 ]
             ]
         ];
 
         if(!$this->validate($rules))
-            return redirect()->back()->withInput()->with('error', $this->validator->getErrors());
+            return redirect()->back()->withInput()->with('error', implode('<br>', $this->validator->getErrors()));
         
         if($this->user->insert([
             'email'     => $this->request->getPost('email'),
             'password'  => md5($this->request->getPost('password'))
         ]))
-            return redirect()->to('/')->with('success', 'Berhasil membuat akun. Silahkan login.');
+            return redirect()->to('/')->with('success', 'Berhasil membuat akun. Silahkan login');
         else
-            return redirect()->back()->with('error', 'Terjadi kesalahan. Coba kembali nanti.');
+            return redirect()->back()->with('error', 'Terjadi kesalahan. Coba kembali nanti');
 
         // return $this->response->setJSON([$email, $password]);
     }
