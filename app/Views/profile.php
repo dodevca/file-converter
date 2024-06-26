@@ -36,7 +36,7 @@
                                 <input type="text" class="form-control" id="first-name" name="first-name" placeholder="" value="<?= $contents->user->nama_depan ?? '' ?>" required>
                             </div>
                             <div class="col-sm-6 mb-3">
-                                <label for="last-name" class="form-label">Last name</label>
+                                <label for="last-name" class="form-label">Nama Belakang</label>
                                 <input type="text" class="form-control" id="last-name" name="last-name" placeholder="" value="<?= $contents->user->nama_belakang ?? '' ?>" required>
                             </div>
                             <div class="col-12 mb-3">

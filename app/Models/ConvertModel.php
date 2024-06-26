@@ -9,8 +9,8 @@ class ConvertModel extends Model
 {
     public function __construct()
     {
-        $this->$apiKey  = env('MIDTRANS_SERVER_KEY');
-        $this->$baseUrl = 'https://api.freeconvert.com/v1/';
+        $this->apiKey  = getenv('MIDTRANS_SERVER_KEY');
+        $this->baseUrl = 'https://api.freeconvert.com/v1/';
     }
 
     public function option($input): ?array

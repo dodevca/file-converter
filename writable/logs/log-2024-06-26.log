@@ -1,0 +1,296 @@
+INFO - 2024-06-26 00:52:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 01:45:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 01:54:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 01:54:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 03:54:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 03:54:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 03:54:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 03:54:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 03:54:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 03:54:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 03:55:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 03:55:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 03:55:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 03:55:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 03:55:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 03:55:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 03:55:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 03:55:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 03:55:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 03:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 03:55:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 03:55:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 03:55:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 03:55:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 03:55:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 03:56:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-26 03:56:08 --> Attempt to read property "iso" on null
+in APPPATH/Models/CountryModel.php on line 24.
+ 1 APPPATH/Models/CountryModel.php(24): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Payment.php(49): App\Models\CountryModel->isoOf()
+ 3 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Payment->index()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 03:56:12 --> Attempt to read property "iso" on null
+in APPPATH/Models/CountryModel.php on line 24.
+ 1 APPPATH/Models/CountryModel.php(24): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Payment.php(49): App\Models\CountryModel->isoOf()
+ 3 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Payment->index()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-26 04:23:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 05:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 05:24:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 06:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 07:36:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 07:36:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:04:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:04:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:05:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:05:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:05:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:05:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:05:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:05:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:05:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:05:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:05:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-26 08:05:45 --> Attempt to read property "iso" on null
+in APPPATH/Models/CountryModel.php on line 24.
+ 1 APPPATH/Models/CountryModel.php(24): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Payment.php(49): App\Models\CountryModel->isoOf()
+ 3 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Payment->index()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 08:05:49 --> Attempt to read property "iso" on null
+in APPPATH/Models/CountryModel.php on line 24.
+ 1 APPPATH/Models/CountryModel.php(24): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Payment.php(49): App\Models\CountryModel->isoOf()
+ 3 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Payment->index()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 08:05:49 --> Attempt to read property "iso" on null
+in APPPATH/Models/CountryModel.php on line 24.
+ 1 APPPATH/Models/CountryModel.php(24): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Payment.php(49): App\Models\CountryModel->isoOf()
+ 3 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Payment->index()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 08:05:50 --> Attempt to read property "iso" on null
+in APPPATH/Models/CountryModel.php on line 24.
+ 1 APPPATH/Models/CountryModel.php(24): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Payment.php(49): App\Models\CountryModel->isoOf()
+ 3 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Payment->index()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 08:05:50 --> Attempt to read property "iso" on null
+in APPPATH/Models/CountryModel.php on line 24.
+ 1 APPPATH/Models/CountryModel.php(24): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Payment.php(49): App\Models\CountryModel->isoOf()
+ 3 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Payment->index()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-26 08:06:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:07:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:07:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-26 08:07:13 --> Attempt to read property "iso" on null
+in APPPATH/Models/CountryModel.php on line 24.
+ 1 APPPATH/Models/CountryModel.php(24): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Payment.php(49): App\Models\CountryModel->isoOf()
+ 3 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Payment->index()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 08:07:16 --> Attempt to read property "iso" on null
+in APPPATH/Models/CountryModel.php on line 24.
+ 1 APPPATH/Models/CountryModel.php(24): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Payment.php(49): App\Models\CountryModel->isoOf()
+ 3 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Payment->index()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 08:07:23 --> Attempt to read property "iso" on null
+in APPPATH/Models/CountryModel.php on line 24.
+ 1 APPPATH/Models/CountryModel.php(24): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Payment.php(49): App\Models\CountryModel->isoOf()
+ 3 SYSTEMPATH/CodeIgniter.php(919): App\Controllers\Payment->index()
+ 4 SYSTEMPATH/CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-26 08:07:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:07:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:07:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:07:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:07:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:07:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:07:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-26 08:08:54 --> Undefined variable $apiKey
+in APPPATH/Models/ConvertModel.php on line 12.
+ 1 APPPATH/Models/ConvertModel.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Convert.php(15): App\Models\ConvertModel->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Convert->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-26 08:09:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:09:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:09:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:09:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:09:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:09:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:11:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:11:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:12:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-26 08:12:20 --> Undefined variable $apiKey
+in APPPATH/Models/ConvertModel.php on line 12.
+ 1 APPPATH/Models/ConvertModel.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Convert.php(15): App\Models\ConvertModel->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Convert->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-26 08:13:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:13:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:13:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-26 08:13:27 --> Undefined variable $apiKey
+in APPPATH/Models/ConvertModel.php on line 12.
+ 1 APPPATH/Models/ConvertModel.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Convert.php(15): App\Models\ConvertModel->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Convert->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-26 08:13:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 08:15:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 09:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 09:04:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 09:04:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 09:04:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 09:04:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 09:04:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 09:47:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 09:57:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-26 09:57:18 --> Undefined variable $apiKey
+in APPPATH/Models/ConvertModel.php on line 12.
+ 1 APPPATH/Models/ConvertModel.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Convert.php(15): App\Models\ConvertModel->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Convert->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 09:58:11 --> Undefined variable $apiKey
+in APPPATH/Models/ConvertModel.php on line 12.
+ 1 APPPATH/Models/ConvertModel.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Convert.php(15): App\Models\ConvertModel->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Convert->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 10:00:22 --> Undefined variable $apiKey
+in APPPATH/Models/ConvertModel.php on line 12.
+ 1 APPPATH/Models/ConvertModel.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Convert.php(15): App\Models\ConvertModel->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Convert->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-26 10:00:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-26 10:00:31 --> Undefined variable $apiKey
+in APPPATH/Models/ConvertModel.php on line 12.
+ 1 APPPATH/Models/ConvertModel.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Convert.php(15): App\Models\ConvertModel->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Convert->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 10:00:37 --> Undefined variable $apiKey
+in APPPATH/Models/ConvertModel.php on line 12.
+ 1 APPPATH/Models/ConvertModel.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Convert.php(15): App\Models\ConvertModel->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Convert->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 10:01:07 --> Undefined variable $apiKey
+in APPPATH/Models/ConvertModel.php on line 14.
+ 1 APPPATH/Models/ConvertModel.php(14): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Convert.php(15): App\Models\ConvertModel->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Convert->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 10:01:09 --> Undefined variable $apiKey
+in APPPATH/Models/ConvertModel.php on line 14.
+ 1 APPPATH/Models/ConvertModel.php(14): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Convert.php(15): App\Models\ConvertModel->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Convert->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 10:01:09 --> Undefined variable $apiKey
+in APPPATH/Models/ConvertModel.php on line 14.
+ 1 APPPATH/Models/ConvertModel.php(14): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Convert.php(15): App\Models\ConvertModel->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Convert->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 10:01:10 --> Undefined variable $apiKey
+in APPPATH/Models/ConvertModel.php on line 14.
+ 1 APPPATH/Models/ConvertModel.php(14): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Convert.php(15): App\Models\ConvertModel->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Convert->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 10:01:26 --> Undefined variable $apiKey
+in APPPATH/Models/ConvertModel.php on line 12.
+ 1 APPPATH/Models/ConvertModel.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Convert.php(15): App\Models\ConvertModel->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Convert->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 10:01:27 --> Undefined variable $apiKey
+in APPPATH/Models/ConvertModel.php on line 12.
+ 1 APPPATH/Models/ConvertModel.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Convert.php(15): App\Models\ConvertModel->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Convert->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 10:01:27 --> Undefined variable $apiKey
+in APPPATH/Models/ConvertModel.php on line 12.
+ 1 APPPATH/Models/ConvertModel.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Convert.php(15): App\Models\ConvertModel->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Convert->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-06-26 10:01:27 --> Undefined variable $apiKey
+in APPPATH/Models/ConvertModel.php on line 12.
+ 1 APPPATH/Models/ConvertModel.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 APPPATH/Controllers/Convert.php(15): App\Models\ConvertModel->__construct()
+ 3 SYSTEMPATH/CodeIgniter.php(891): App\Controllers\Convert->__construct()
+ 4 SYSTEMPATH/CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 5 SYSTEMPATH/CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest()
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-06-26 10:01:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 10:02:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 10:02:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 10:02:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 10:02:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 10:02:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 10:03:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 10:03:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 10:03:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 10:03:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-26 10:03:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

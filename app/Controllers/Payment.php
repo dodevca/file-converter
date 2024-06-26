@@ -17,7 +17,7 @@ class Payment extends BaseController
 
     public function __construct()
     {
-        Config::$serverKey      = env('MIDTRANS_SERVER_KEY');
+        Config::$serverKey      = getenv('MIDTRANS_SERVER_KEY');
         Config::$isProduction   = false;
     }
 
