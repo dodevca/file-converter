@@ -17,6 +17,8 @@ class Convert extends BaseController
 
     public function index()
     {
+        helper('filesystem');
+
         $files      = $this->request->getFiles();
         $formats    = $this->request->getPost('formats');
         $exportName = "Convy.zip";
@@ -82,6 +84,8 @@ class Convert extends BaseController
 
             sleep(2);
         } while(!$completed);
+
+        delete_files(ROOTPATH . 'public/uploads/');
 
         return $this->response->setJSON(['status' => 200, 'responses' => $data['result']['url']]);
     }

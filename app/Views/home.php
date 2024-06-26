@@ -58,7 +58,7 @@
 </section>
 <section class="bg-primary text-white">
 	<div class="container py-5">
-		<div class="row text-center">
+		<div class="row text-center justify-content-center">
 			<div class="col-md-6 col-lg-4 p-3 mb-4">
 				<i class="bi bi-arrow-repeat fs-1 text-secondary"></i>
 				<h5>300+ Format Didukung</h5>
@@ -67,27 +67,22 @@
 			<div class="col-md-6 col-lg-4 p-3 mb-4">
 				<i class="bi bi-star fs-1 text-secondary"></i>
 				<h5>Cepat dan mudah</h5>
-				<p class="text-tertiary m-0">Letakkan saja file Anda di halaman, pilih format keluaran dan klik tombol "Konversi". Tunggu sebentar hingga prosesnya selesai. Kami bertujuan untuk melakukan semua konversi kami dalam waktu kurang dari 1-2 menit.</p>
+				<p class="text-tertiary m-0">Letakkan saja file Anda di halaman, pilih format keluaran dan klik tombol "Konversi". Tunggu sebentar hingga prosesnya selesai.</p>
 			</div>
 			<div class="col-md-6 col-lg-4 p-3 mb-4">
 				<i class="bi bi-cloud-arrow-up fs-1 text-secondary"></i>
 				<h5>Penyimpanan di Cloud</h5>
-				<p class="text-tertiary m-0">Semua konversi terjadi di cloud dan tidak akan menghabiskan kapasitas apa pun dari komputer Anda.</p>
-			</div>
-			<div class="col-md-6 col-lg-4 p-3 mb-4">
-				<i class="bi bi-gear fs-1 text-secondary"></i>
-				<h5>Pengaturan khusus</h5>
-				<p class="text-tertiary m-0">Sebagian besar jenis konversi mendukung opsi lanjutan. Misalnya dengan konverter video Anda dapat memilih kualitas, rasio aspek, codec dan pengaturan lainnya, memutar dan membalik.</p>
+				<p class="text-tertiary m-0">Semua konversi yang anda lakukan tidak akan menghabiskan kapasitas apa pun dari komputer Anda.</p>
 			</div>
 			<div class="col-md-6 col-lg-4 p-3 mb-4">
 				<i class="bi bi-check-circle fs-1 text-secondary"></i>
 				<h5>Keamanan terjamin</h5>
-				<p class="text-tertiary m-0">Kami menghapus file yang diunggah secara instan dan file yang dikonversi setelah 24 jam. Tidak ada seorang pun yang memiliki akses ke file Anda dan privasi dijamin 100%. Baca lebih lanjut tentang keamanan.</p>
+				<p class="text-tertiary m-0">Kami menghapus file yang diunggah secara instan setelah file terkonversi. Tidak ada seorang pun yang memiliki akses ke file Anda dan privasi dijamin 100%.</p>
 			</div>
 			<div class="col-md-6 col-lg-4 p-3 mb-4">
 				<i class="bi bi-display fs-1 text-secondary"></i>
 				<h5>Semua perangkat didukung </h5>
-				<p class="text-tertiary m-0">Convertio berbasis browser dan berfungsi untuk semua platform. Tidak perlu mengunduh dan menginstal perangkat lunak apa pun. </p>
+				<p class="text-tertiary m-0">Convy berbasis website dan berfungsi untuk semua platform. Tidak perlu mengunduh dan menginstal perangkat lunak apa pun.</p>
 			</div>
 		</div>
 	</div>
@@ -286,6 +281,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     const handleSubmit = () => {
         const form 			= new FormData()
+		const isSubscribe	= Boolean.valueOf('<?= $user->subscription ? 'true' : 'false' ?>')
 		convertBtn.disabled = true
 
 		if(sessionStorage.convertCount)
@@ -293,21 +289,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		else
 			sessionStorage.convertCount = 1
 		
+		if(sessionStorage.convertCount >= 3 && !isSubscribe) {
+			let alertHTML = `
+				<div class="alert alert-danger text-start alert-dismissible fade show" role="alert">
+					Anda terlalu banyak melakukan konversi. <a href="/pricing"><strong>Berlangganan</strong></a> untuk mendapatkan lebih.
+					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				</div>
+			`
 
-		<?php if(!$user->subscription): ?>
-			if(sessionStorage.convertCount >= 3) {
-				let alertHTML = `
-					<div class="alert alert-danger text-start alert-dismissible fade show" role="alert">
-						Anda terlalu banyak melakukan konversi. <a href="/pricing"><strong>Berlangganan</strong></a> untuk mendapatkan lebih.
-						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-					</div>
-				`
+			fileArea.insertAdjacentHTML('afterbegin', alertHTML)
+		}
 
-				fileArea.insertAdjacentHTML('afterbegin', alertHTML)
-			}
-		<?php endif; ?>
-
-		if(sessionStorage.convertCount <= 3) {
+		if(sessionStorage.convertCount <= 3 || isSubscribe) {
 			fileArea.style.display	= 'none'
 			loading.style.display 	= 'block'
 

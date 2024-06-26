@@ -57,7 +57,7 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-accordion-1" aria-controls="faq-accordion-1"> Apa itu menit konversi? </button>
                 </h2>
                 <div id="faq-accordion-1" class=" accordion-collapse collapse">
-                    <div class="accordion-body"> Menit konversi mengukur berapa lama waktu yang dibutuhkan untuk mengonversi file Anda di server kami. Umumnya, konversi foto dan dokumen hanya membutuhkan waktu satu menit saja untuk dikonversi. File besar atau codec tingkat lanjut menghabiskan lebih banyak menit konversi. Penggunaan menit konversi Anda terlihat di dasbor akun Anda. Kami hanya menagih Anda untuk konversi yang berhasil. </div>
+                    <div class="accordion-body"> Menit konversi mengukur berapa lama waktu yang dibutuhkan untuk mengonversi file Anda di server kami. Umumnya, konversi foto dan dokumen hanya membutuhkan waktu satu menit saja untuk dikonversi. File besar atau codec tingkat lanjut menghabiskan lebih banyak menit konversi. Penggunaan menit konversi Anda terlihat di dasbor akun Anda. </div>
                 </div>
             </div>
             <div class="accordion-item mb-3 rounded-3">
@@ -65,23 +65,23 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-accordion-2" aria-controls="faq-accordion-2"> Bisakah saya mendaftar hanya untuk satu bulan? </button>
                 </h2>
                 <div id="faq-accordion-2" class="accordion-collapse collapse">
-                    <div class="accordion-body"> Ya, Anda dapat mendaftar akun pro hanya untuk satu bulan. Cukup batalkan langganan (dari halaman akun) kapan saja sehingga tidak diperpanjang setelah bulan pertama. </div>
+                    <div class="accordion-body"> Ya, Anda dapat berlangganan hanya untuk satu bulan. Semua langganan yang disediakan umumnya berdurasi 1 bulan. </div>
                 </div>
             </div>
             <div class="accordion-item mb-3 rounded-3">
                 <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-accordion-3" aria-controls="faq-accordion-3"> Bisakah saya mencoba FreeConvert.com secara gratis? </button>
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-accordion-3" aria-controls="faq-accordion-3"> Bisakah saya mencoba konversi secara gratis? </button>
                 </h2>
                 <div id="faq-accordion-3" class="accordion-collapse collapse">
-                    <div class="accordion-body"> Pengguna gratis mendapatkan 20 menit konversi per hari. Bagi sebagian besar pengguna, konversi hanya memerlukan waktu satu menit atau kurang. Ini berarti hingga 20 file per hari dapat dikonversi secara gratis. Anda tidak perlu membuat akun untuk mendapatkan manfaat ini. Harap dicatat bahwa ada batasan 5 menit konversi per file untuk penggunaan gratis. </div>
+                    <div class="accordion-body"> Pengguna gratis mendapatkan 3 kali konversi per hari. Anda tidak perlu membuat akun untuk mendapatkan manfaat ini. Harap dicatat bahwa ada batasan ukuran 100 MB per file untuk penggunaan gratis. </div>
                 </div>
             </div>
             <div class="accordion-item mb-3 rounded-3">
                 <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-accordion-4" aria-controls="faq-accordion-4"> Berapa lama untuk mengaktifkannya? </button>
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-accordion-4" aria-controls="faq-accordion-4"> Berapa lama untuk mengaktifkan paket langganan? </button>
                 </h2>
                 <div id="faq-accordion-4" class=" accordion-collapse collapse">
-                    <div class="accordion-body"> Fitur Pro akan ditambahkan ke akun Anda segera setelah pembayaran. </div>
+                    <div class="accordion-body"> Paket akan ditambahkan ke akun Anda langsung setelah pembayaran. Anda dapat melihat riwayat pembayaran dan paket aktif Anda pada dasbor. </div>
                 </div>
             </div>
             <div class="accordion-item mb-3 rounded-3">
@@ -89,15 +89,7 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-accordion-5" aria-controls="faq-accordion-5"> Apakah detail pembayaran saya aman? </button>
                 </h2>
                 <div id="faq-accordion-5" class="accordion-collapse collapse">
-                    <div class="accordion-body"> We use industry-leading payment providers Stripe and PayPal for payment processing. Payment data is transferred through 128-bit secure HTTPS and is never saved on our servers. </div>
-                </div>
-            </div>
-            <div class="accordion-item mb-3 rounded-3">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-accordion-6" aria-controls="faq-accordion-6"> Bagaimana jika konversi file saya gagal? </button>
-                </h2>
-                <div id="faq-accordion-6" class="accordion-collapse collapse">
-                    <div class="accordion-body"> Jika Anda mengalami masalah saat mengonversi file, teknisi kami yang berdedikasi akan dengan senang hati membantu Anda. Silakan kirim email kepada kami menggunakan halaman hubungi kami. </div>
+                    <div class="accordion-body"> Kami menggunakan penyedia pembayaran (payment gateway) Midtrans untuk pemrosesan pembayaran. Data pembayaran ditransfer melalui pihak ketiga dan tidak pernah tersimpan dalam server kami. </div>
                 </div>
             </div>
             <div class="accordion-item mb-3 rounded-3">
@@ -105,7 +97,7 @@
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-accordion-7" aria-controls="faq-accordion-7"> Metode pembayaran apa yang tersedia? </button>
                 </h2>
                 <div id="faq-accordion-7" class=" accordion-collapse collapse">
-                    <div class="accordion-body"> Saat ini kami menerima Kartu Kredit/Debit (Visa, MasterCard, Amex, Discover, Diners Club, JCB), PayPal, Google Pay, Apple Pay, Alipay, iDEAL, Sofort, GiroPay. Tersedia lebih banyak metode pembayaran tergantung pada negara Anda. </div>
+                    <div class="accordion-body"> Hampir semua jenis pembayaran tersedia, kecuali uang tunai. Tersedia lebih banyak metode pembayaran tergantung pada negara Anda. </div>
                 </div>
             </div>
         </div>

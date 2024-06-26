@@ -9,7 +9,7 @@ class ConvertModel extends Model
 {
     public function __construct()
     {
-        $this->apiKey  = getenv('MIDTRANS_SERVER_KEY');
+        $this->apiKey  = getenv('FREECONVERT_API_KEY');
         $this->baseUrl = 'https://api.freeconvert.com/v1/';
     }
 
