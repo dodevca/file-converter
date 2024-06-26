@@ -1,2 +1,4 @@
 .env
 writable/session
+writable/debuggar
+writable/logs
