@@ -289,7 +289,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		else
 			sessionStorage.convertCount = 1
 		
-		if(sessionStorage.convertCount >= 3 && !isSubscribe) {
+		if(sessionStorage.convertCount > 3 && !isSubscribe) {
 			let alertHTML = `
 				<div class="alert alert-danger text-start alert-dismissible fade show" role="alert">
 					Anda terlalu banyak melakukan konversi. <a href="/pricing"><strong>Berlangganan</strong></a> untuk mendapatkan lebih.

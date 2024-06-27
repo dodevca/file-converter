@@ -199,7 +199,7 @@ class Dashboard extends BaseController
             ];
             
         if($this->user->update($this->data['user']->id, $data))
-            return redirect()->back()->with('success', 'Berhasil memperbaharui ' . $this->request->getPost('password') ? 'password' : 'alamat penagihan' . ' Anda');
+            return redirect()->back()->with('success', 'Berhasil memperbaharui data Anda');
         else
             return redirect()->back()->with('error', 'Terjadi kesalahan. Pastikan data yang Anda masukkan benar');
 

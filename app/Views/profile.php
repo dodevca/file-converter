@@ -50,7 +50,6 @@
                             <div class="col-md-5 mb-3">
                                 <label for="country" class="form-label">Negara</label>
                                 <select class="form-select" id="country" name="country" required>
-                                    <option selected>Pilih negara</option>
                                     <?php foreach($contents->country as $c): ?>
                                         <option value="<?= $c->nama ?>" <?= $contents->user->negara == $c->nama ? 'selected' : '' ?>><?= $c->nama ?></option>
                                     <?php endforeach; ?>
