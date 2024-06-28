@@ -281,13 +281,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     const handleSubmit = () => {
         const form 			= new FormData()
-		const isSubscribe	= Boolean.valueOf('<?= $user->subscription ? 'true' : 'false' ?>')
+		const isSubscribe	= ('<?= $user->subscription ? 'true' : 'false' ?>' === 'true')
 		convertBtn.disabled = true
 
 		if(sessionStorage.convertCount)
 			sessionStorage.convertCount = Number(sessionStorage.convertCount) + 1
 		else
 			sessionStorage.convertCount = 1
+
+		console.log(sessionStorage.convertCount)
+		console.log(isSubscribe)
 		
 		if(sessionStorage.convertCount > 3 && !isSubscribe) {
 			let alertHTML = `
@@ -376,6 +379,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		<?php if($user->subscription): ?>
 			<?php if($user->subscription->menit > 0): ?>
 	        	handleSubmit()
+			<?php else: ?>
+				let alertHTML = `
+					<div class="alert alert-danger text-start alert-dismissible fade show" role="alert">
+						Menit konversi anda telah habis. <a href="/pricing"><strong>Upgrade</strong></a> untuk mendapatkan lebih.
+						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+					</div>
+				`
+
+				fileArea.insertAdjacentHTML('afterbegin', alertHTML)
 			<?php endif; ?>
 		<?php else: ?>
 	        handleSubmit()

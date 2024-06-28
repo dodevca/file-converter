@@ -28,6 +28,9 @@ class SubscriptionModel extends Model
 
     public function used($userId, $minutes)
     {
+        if($minutes < 0)
+            $minutes = 0;
+
         $this->where('id_pengguna', $userId)->set(['menit' => $minutes])->update();
     }
 }
