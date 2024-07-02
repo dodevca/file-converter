@@ -98,7 +98,8 @@ class Home extends BaseController
                 'rules'     => 'required|valid_email|is_unique[pengguna.email]',
                 'errors'    => [
                     'required'      => 'Email tidak boleh kosong. Masukkan email yang terdaftar',
-                    'valid_email'   => 'Email tidak terdaftar. Pastikan penulisan format email benar'
+                    'valid_email'   => 'Email tidak terdaftar. Pastikan penulisan format email benar',
+                    'is_unique'     => 'Email sudah terdaftar'
                 ]
             ],
             'password'  => [
