@@ -56,5 +56,10 @@ This project is collaboratively developed by:
 Interested in collaborating or enhancing this project?
 Reach me at [LinkedIn](https://linkedin.com/in/dodevca) or visit [dodevca.com](https://dodevca.com).
 
+## License
+This project is licensed under GNU General Public License v3.0 (GPLv3).
+Built using CodeIgniter 4 framework (MIT License).
+See NOTICE.md for detailed attribution.
+
 ## Signature
 Initiated by **Dodevca**, open for collaboration and continuous refinement.
