@@ -39,17 +39,18 @@ Access the live demo at: [https://file-converter.dodevca.com](https://file-conve
 6. Access the app at `http://localhost:8080`.
 
 ## Future Improvements
-- Add file queue processing for large batch conversions.
-- Enhance UI with conversion history and user preferences.
-- Implement file conversion cost estimation using FreeConvert API pricing.
-- Deploy public demo with usage restrictions.
+- [ ] Add file queue processing for large batch conversions.
+- [ ] Enhance UI with conversion history and user preferences.
+- [ ] Implement file conversion cost estimation using FreeConvert API pricing.
+- [ ] Deploy public demo with usage restrictions.
 
 ## Contributors
 This project is collaboratively developed by:
-- Dodevca (Rio Ananda)
-- RolandSitompul750 (Roland Sitompul)
-- siwanyesarela
-- lumilime
+- [Dodevca](https://github.com/dodevca)
+- [Gilangsejati](https://github.com/Gilangsejati)
+- [lumilime](https://github.com/lumilime)
+- [RolandSitompul](https://github.com/RolandSitompul750)
+- [siwanyesarela](https://github.com/siwanyesarela)
 
 ## Contact & Collaboration
 Interested in collaborating or enhancing this project?
