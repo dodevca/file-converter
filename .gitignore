@@ -1,4 +1,9 @@
-.env
-writable/session
-writable/debuggar
-writable/logs
+/vendor/
+/writable/cache/
+/writable/logs/
+/writable/session/
+/.env
+.env.*
+.DS_Store
+Thumbs.db
+.well-known

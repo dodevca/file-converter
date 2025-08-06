@@ -1,59 +1,59 @@
-<<<<<<< HEAD
-# CodeIgniter 4 Framework
+# File Converter Web App
 
-## What is CodeIgniter?
+## About This Project
+A web-based file conversion service built with CodeIgniter 4, integrating FreeConvert.com API v1.0.5 to handle multiple file format conversions. This project enables users to upload files and convert them into desired formats seamlessly, leveraging FreeConvert's robust API services.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+## Tech Stack & Tools
+| Category     | Stack                         |
+|--------------|-------------------------------|
+| Back-end     | PHP (CodeIgniter 4)            |
+| Front-end    | Bootstrap, jQuery              |
+| API Integration | FreeConvert.com API v1.0.5 |
+| Others       | MySQL (Database)               |
 
-This repository holds the distributable version of the framework.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+## Key Features
+- File upload with progress indicator.
+- Format conversion using FreeConvert.com API.
+- User-friendly dashboard to manage conversion tasks.
+- Error handling and conversion status feedback.
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+## Live Demo (optional)
+Access the live demo at: [https://file-converter.dodevca.com](https://file-converter.dodevca.com)
 
-The user guide corresponding to the latest version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+## Installation and Usage (Local Setup)
+1. Clone this repository.
+2. Install dependencies via Composer.
+    ```bash
+    composer install
+    ```
+3. Setup environment.
+    - Copy `.env.example` to `.env` and configure your database & FreeConvert API Key.
+4. Run database migrations (if any).
+    ```bash
+    php spark migrate
+    ```
+5. Start development server.
+    ```bash
+    php spark serve
+    ```
+6. Access the app at `http://localhost:8080`.
 
-## Important Change with index.php
+## Future Improvements
+- Add file queue processing for large batch conversions.
+- Enhance UI with conversion history and user preferences.
+- Implement file conversion cost estimation using FreeConvert API pricing.
+- Deploy public demo with usage restrictions.
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+## Contributors
+This project is collaboratively developed by:
+- Dodevca (Rio Ananda)
+- RolandSitompul750 (Roland Sitompul)
+- siwanyesarela
+- lumilime
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+## Contact & Collaboration
+Interested in collaborating or enhancing this project?
+Reach me at [LinkedIn](https://linkedin.com/in/dodevca) or visit [dodevca.com](https://dodevca.com).
 
-**Please** read the user guide for a better explanation of how CI4 works!
-
-## Repository Management
-
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Contributing
-
-We welcome contributions from the community.
-
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
-
-## Server Requirements
-
-PHP version 7.4 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
-=======
-# file-converter
-File converter website using FreeConvert.com API v1.0.5
->>>>>>> a4a31fe41865aa9075aa12f3c2ad9c5bfad31ae4
+## Signature
+Initiated by **Dodevca**, open for collaboration and continuous refinement.
